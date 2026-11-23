@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Valet Club | Private Menswear Styling in Phoenix &amp; Scottsdale</title>
+<meta name="description" content="Private personal styling for men. Wardrobe edits, personal shopping, and occasion dressing in Phoenix and Scottsdale. By appointment.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Valet Club | Private Menswear Styling">
+<meta property="og:description" content="Dress well. Live effortlessly. Private styling for men in Phoenix and Scottsdale.">
+<meta property="og:image" content="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-editorial-standing.JPG&amp;w=640&amp;q=75">
+<meta name="theme-color" content="#061A33">
+<link rel="icon" href="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-tag-logo.png&amp;w=96&amp;q=75">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Manrope:wght@400;500;600&display=swap">
+<style>
+/* The Valet Club. Brand navy and cream from the original site, with wardrobe accents:
+   oxblood, oxford-shirt blue, camel. The signature element is the garment hang tag
+   (the brand's own mark is a valet tag): services are written on tags. */
+:root{
+  --linen:#F1EEE5; --linen-2:#E6E1D4; --white:#FBFAF6;
+  --ink:#0B1626; --ink-2:#5A554D; --line:rgba(11,22,38,.16);
+  --green:#061A33; --green-2:#041226; --oxblood:#641E2B; --blue:#C7D7E6; --blue-d:#2B4A6B; --camel:#C39A6B; --camel-l:#E6D3B8;
+  --f-d:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-b:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,.7,.2,1);
+  --wrap:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--linen);color:var(--ink);font:400 1.0625rem/1.6 var(--f-b);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+p,h1,h2,h3,h4,ul,ol,dl,dd,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--f-d);font-weight:400;letter-spacing:-.02em;line-height:1.02;font-optical-sizing:auto;text-wrap:balance}
+h2{font-size:clamp(2.3rem,4.8vw,4.1rem)}
+h3{font-size:clamp(1.5rem,2.1vw,1.9rem);line-height:1.1}
+i,em{font-style:italic}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:max(22px,env(safe-area-inset-left,0px)) max(22px,env(safe-area-inset-right,0px))}
+.sec{padding-block:clamp(76px,10vw,148px)}
+.lede{font-size:clamp(1.1rem,1.45vw,1.3rem);line-height:1.55;max-width:56ch;color:var(--ink-2)}
+.on-dark{color:var(--linen)} .on-dark .lede{color:rgba(241,238,229,.78)}
+.ic{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ic.fill{fill:currentColor;stroke:none}
+:focus-visible{outline:2px solid var(--camel);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:99;background:var(--white);padding:10px 14px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;font:500 1rem var(--f-b);text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--linen);border-radius:2px;cursor:pointer;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
+.btn:hover{background:var(--oxblood);border-color:var(--oxblood);color:var(--linen)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:var(--ink);color:var(--linen);border-color:var(--ink)}
+.btn.camel{background:var(--camel);border-color:var(--camel);color:var(--ink)}
+.btn.camel:hover{background:var(--linen);border-color:var(--linen);color:var(--ink)}
+.on-dark .btn.ghost:hover{background:var(--linen);color:var(--ink);border-color:var(--linen)}
+
+/* photo frame: shows woven cloth if a photo is unavailable */
+.ph{position:relative;overflow:hidden;background-color:var(--tone,var(--green-2));background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.055) 0 2px,transparent 2px 9px),repeating-linear-gradient(-45deg,rgba(0,0,0,.09) 0 2px,transparent 2px 9px)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.noimg img{display:none}
+
+/* note bar + header */
+.note{background:var(--green-2);color:var(--linen);font-size:.875rem}
+.note .wrap{display:flex;justify-content:center;align-items:center;gap:8px 18px;flex-wrap:wrap;padding-block:9px;text-align:center}
+.note a{font-weight:500}
+.hdr{position:sticky;top:0;z-index:50;background:rgba(241,238,229,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:74px}
+.logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:400 1.5rem/1 var(--f-d);letter-spacing:-.02em;white-space:nowrap}
+.logo img{display:block;width:auto}
+.logo .lt{height:40px}
+.logo .lw{height:46px}
+@media (max-width:480px){.logo .lt{height:34px}.logo .lw{height:38px}}
+.logo small{display:block;font:500 .7rem var(--f-b);letter-spacing:.02em;color:var(--ink-2);margin-top:4px}
+.hdr nav{display:flex;gap:clamp(16px,2vw,30px)}
+.hdr nav a{text-decoration:none;font-size:.98rem;padding-block:8px;border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr nav a:hover,.hdr nav a[aria-current="true"]{border-color:var(--ink)}
+.hdr .btn{min-height:44px;padding:10px 20px;font-size:.95rem}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--ink);background:none;border-radius:2px;cursor:pointer;color:var(--ink)}
+.burger span{display:block;width:18px;height:1.5px;background:currentColor;margin:5px auto;transition:transform .35s var(--ease),opacity .2s}
+.hdr.open .burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hdr.open .burger span:nth-child(2){opacity:0}
+.hdr.open .burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.hdr nav .m-only{display:none}
+@media (max-width:1000px){
+  .hdr nav,.hdr .book{display:none}.burger{display:block}
+  .hdr.open nav{display:grid;gap:0;position:absolute;left:0;right:0;top:100%;background:var(--linen);border-bottom:1px solid var(--line);padding:6px 22px 26px;max-height:calc(100dvh - 74px);overflow:auto}
+  .hdr.open nav a{font:340 1.9rem var(--f-d);letter-spacing:-.02em;padding:15px 0;border-bottom:1px solid var(--line)}
+  .hdr.open nav .m-only{display:flex;font:500 1rem var(--f-b);letter-spacing:0;border:0;margin-top:20px;justify-content:center;background:var(--ink);color:var(--linen);padding:16px}
+}
+
+/* hero */
+.hero{background:var(--green);overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,80px);align-items:center;padding-block:clamp(48px,7vw,104px)}
+.hero h1{font-size:clamp(3.3rem,8.2vw,7.6rem);font-weight:300;line-height:.94;letter-spacing:-.035em}
+.hero h1 span{display:block}
+.hero h1 .l2{font-style:italic;padding-left:.55em;color:var(--camel-l)}
+.hero .copy{display:grid;gap:28px;justify-items:start}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .where{display:flex;align-items:center;gap:10px;font-size:.98rem;color:rgba(241,238,229,.82)}
+.hero .shot{position:relative;justify-self:end;width:100%;max-width:520px}
+.hero .shot .ph{aspect-ratio:4/5;--tone:#0c2747}
+.hero .shot::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(230,211,184,.45);pointer-events:none}
+.hangtag{position:absolute;left:-34px;bottom:44px;z-index:2;width:176px;background:var(--white);color:var(--ink);padding:40px 18px 18px;text-align:center;clip-path:polygon(22px 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%,0 22px);transform:rotate(-7deg);transform-origin:50% 0}
+.hangtag::before{content:"";position:absolute;left:50%;top:14px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 2px var(--white),0 0 0 3px var(--line)}
+.hangtag img{width:64px;height:64px;margin:0 auto;object-fit:contain}
+.hangtag span{display:block;font-size:.8rem;line-height:1.35;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink-2)}
+@media (prefers-reduced-motion:no-preference){
+  .hangtag{animation:swing 2.6s var(--ease) .5s both}
+  .hero .copy>*{animation:up .9s var(--ease) both}
+  .hero .copy>*:nth-child(2){animation-delay:.1s}.hero .copy>*:nth-child(3){animation-delay:.2s}.hero .copy>*:nth-child(4){animation-delay:.3s}
+  .hero .shot .ph{animation:up 1.1s var(--ease) .15s both}
+}
+@keyframes swing{0%{transform:rotate(9deg)}30%{transform:rotate(-12deg)}55%{transform:rotate(-4deg)}78%{transform:rotate(-8.5deg)}100%{transform:rotate(-7deg)}}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.promise{border-top:1px solid rgba(241,238,229,.18)}
+.promise ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.promise li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;padding:28px 28px 32px 0;align-items:start}
+.promise li+li{padding-left:28px;border-left:1px solid rgba(241,238,229,.18)}
+.promise .ic{width:30px;height:30px;color:var(--camel-l);grid-row:span 2;margin-top:2px}
+.promise b{font:400 1.3rem/1.2 var(--f-d)}
+.promise span{font-size:.95rem;color:rgba(241,238,229,.74)}
+@media (max-width:900px){
+  .hero .grid{grid-template-columns:1fr}
+  .hero .shot{justify-self:center;max-width:440px;width:calc(100% - 28px);margin-right:14px}
+  .hangtag{left:-14px;width:150px;bottom:30px}
+  .promise ul{grid-template-columns:1fr}
+  .promise li{padding:20px 0}.promise li+li{padding-left:0;border-left:0;border-top:1px solid rgba(241,238,229,.18)}
+}
+
+/* intro */
+.intro .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:center}
+.intro .stack{display:grid;gap:26px}
+.intro .big{font:320 clamp(1.7rem,3vw,2.6rem)/1.18 var(--f-d);letter-spacing:-.02em}
+.offer{border-top:1px solid var(--ink)}
+.offer li{display:grid;grid-template-columns:minmax(0,11.5rem) minmax(0,1fr);gap:8px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.offer b{font:400 1.25rem var(--f-d)}
+.offer span{color:var(--ink-2);font-size:.98rem}
+.pair{position:relative;aspect-ratio:1/1.12}
+.pair .a{position:absolute;inset:0 20% 14% 0;--tone:var(--oxblood)}
+.pair .b{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;border:10px solid var(--linen);--tone:var(--blue-d)}
+.signoff{font:400 italic 1.5rem var(--f-d);color:var(--oxblood)}
+@media (max-width:900px){.intro .grid{grid-template-columns:1fr}.pair{max-width:520px}.offer li{grid-template-columns:1fr}}
+
+/* services: hang tags */
+.services{background:var(--blue);overflow-x:clip}
+.head{display:grid;gap:18px;max-width:760px;margin-bottom:clamp(40px,5vw,68px)}
+.tags{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.tagwrap{filter:drop-shadow(0 18px 30px rgba(27,45,66,.18));display:flex;transition:transform .5s var(--ease)}
+.tagwrap:hover{transform:translateY(-6px) rotate(-.4deg)}
+.tag{position:relative;flex:1;min-width:0;display:flex;flex-direction:column;background:var(--white);clip-path:polygon(34px 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%,0 34px)}
+.tag::before{content:"";position:absolute;left:50%;top:20px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 3px var(--white),0 0 0 4px var(--line);z-index:1}
+.tag .top{padding:62px clamp(22px,2.4vw,34px) 26px;display:grid;gap:14px;align-content:start;flex:1}
+.tag .meta{font-size:.9rem;color:var(--ink-2);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.tag .meta .lim{color:var(--oxblood);font-weight:500}
+.tag h3{font-size:clamp(1.9rem,2.6vw,2.4rem)}
+.tag p{color:var(--ink-2);font-size:.99rem}
+.tag ul{border-top:1px solid var(--ink);margin-top:6px}
+.tag li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.tag li .ic{margin-top:.2em;color:var(--green)}
+.tag .best{font:400 italic 1.05rem/1.4 var(--f-d);color:var(--ink)}
+.tag .stub{position:relative;padding:24px clamp(22px,2.4vw,34px) 28px;border-top:1.5px dashed rgba(11,22,38,.32);display:grid;gap:16px}
+.tag .stub::before,.tag .stub::after{content:"";position:absolute;top:-10px;width:20px;height:20px;border-radius:50%;background:var(--blue)}
+.tag .stub::before{left:-10px}.tag .stub::after{right:-10px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price b{font:300 clamp(2.8rem,4vw,3.6rem)/1 var(--f-d);letter-spacing:-.03em;font-variant-numeric:lining-nums}
+.price span{font-size:.92rem;color:var(--ink-2)}
+.tag .btn{width:100%}
+.tag.feature{background:var(--green);color:var(--linen)}
+.tag.feature p,.tag.feature .meta,.tag.feature .price span{color:rgba(241,238,229,.76)}
+.tag.feature .best{color:var(--camel-l)}
+.tag.feature ul{border-color:rgba(241,238,229,.5)}
+.tag.feature li{border-color:rgba(241,238,229,.18)}
+.tag.feature li .ic{color:var(--camel-l)}
+.tag.feature .stub{border-top-color:rgba(241,238,229,.4)}
+@media (max-width:1040px){.tags{grid-template-columns:minmax(0,1fr);max-width:560px;margin-inline:auto}}
+
+.compare{margin-top:clamp(56px,7vw,92px)}
+.compare h3{margin-bottom:8px}
+.compare>p{color:var(--ink-2);margin-bottom:22px}
+.tblwrap{position:relative;max-width:100%;overflow-x:auto;background:var(--white);border:1px solid var(--line)}
+table{width:100%;min-width:600px;border-collapse:collapse;font-size:.98rem}
+th,td{padding:15px 16px;text-align:center;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;padding-left:clamp(16px,2.4vw,28px)}
+thead th{font:400 1.2rem var(--f-d);border-bottom:1px solid var(--ink);vertical-align:bottom}
+tbody th{font-weight:400}
+@media (max-width:700px){table{min-width:540px;font-size:.92rem}tbody th,thead th:first-child{position:sticky;left:0;background:var(--white);max-width:150px;box-shadow:1px 0 0 var(--line)}tbody tr:last-child th{background:var(--linen)}th,td{padding:13px 10px}}
+td .ic{margin-inline:auto;color:var(--green);width:20px;height:20px}
+td.no{color:rgba(11,22,38,.28)}
+td.v{font:400 italic 1.08rem var(--f-d)}
+tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
+.swipe{display:none}@media (max-width:700px){.swipe{display:inline}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+
+/* quiz */
+.quiz{margin-top:clamp(40px,5vw,64px);background:var(--blue-d);color:var(--linen);padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,64px);align-items:start}
+.quiz h3{font-size:clamp(1.8rem,3vw,2.6rem)}
+.quiz .intro-p{color:rgba(241,238,229,.8);margin-top:14px;max-width:34ch}
+.quiz .prog{margin-top:22px;font-size:.92rem;color:rgba(241,238,229,.7)}
+.quiz .q{display:none}.quiz .q.on{display:block}
+.quiz .q p.qq{font:400 clamp(1.3rem,2vw,1.6rem)/1.2 var(--f-d);margin-bottom:16px}
+.quiz .q button{display:block;width:100%;text-align:left;font:400 1rem/1.4 var(--f-b);color:var(--linen);background:rgba(241,238,229,.07);border:1px solid rgba(241,238,229,.3);border-radius:2px;padding:15px 18px;margin-top:10px;cursor:pointer;transition:background .25s,border-color .25s}
+.quiz .q button:hover{background:rgba(241,238,229,.16);border-color:var(--linen)}
+.quiz .res{display:none}.quiz .res.on{display:grid;gap:14px;justify-items:start}
+.quiz .res small{font-size:.92rem;color:rgba(241,238,229,.7)}
+.quiz .res b{font:340 clamp(2.2rem,4vw,3.4rem)/1 var(--f-d);letter-spacing:-.02em}
+.quiz .res p{color:rgba(241,238,229,.85);max-width:44ch}
+.quiz .res .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.quiz .again{background:none;border:0;color:var(--linen);text-decoration:underline;text-underline-offset:.2em;font:400 1rem var(--f-b);cursor:pointer;padding:14px 6px}
+@media (max-width:900px){.quiz{grid-template-columns:1fr}}
+
+/* journal */
+.journal{background:var(--white)}
+.jgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(32px,5vw,80px);align-items:start}
+.jgrid h3.col{font-size:clamp(1.6rem,2.4vw,2.1rem);padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.jgrid .asof{font-size:.92rem;color:var(--ink-2);margin:10px 0 0}
+.news li{padding:24px 0;border-bottom:1px solid var(--line);display:grid;gap:8px}
+.news h4{font:400 clamp(1.3rem,1.9vw,1.6rem)/1.2 var(--f-d);letter-spacing:-.015em}
+.news p{color:var(--ink-2);max-width:60ch}
+.news .take{color:var(--ink);font:400 italic 1.08rem/1.45 var(--f-d)}
+.news .src{font-size:.9rem;color:var(--ink-2)}
+.news .src a{color:var(--oxblood)}
+.jside{display:grid;gap:22px;position:sticky;top:104px}
+.card{padding:clamp(22px,2.6vw,32px);display:grid;gap:14px}
+.card.desert{background:var(--camel-l)}
+.card.list{background:var(--linen);border:1px solid var(--line)}
+.card h3{font-size:clamp(1.5rem,2.1vw,1.85rem)}
+.card p{font-size:.98rem;color:#4d4539}
+.card.desert li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid rgba(11,22,38,.18);font-size:.97rem}
+.card.desert li b{font:400 1.08rem var(--f-d)}
+.card.desert li .ic{margin-top:.25em;color:var(--oxblood)}
+.ticks{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px}
+.ticks label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:.95rem;cursor:pointer;line-height:1.35}
+.ticks input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:1px 0 0;border:1px solid var(--ink);border-radius:2px;background:var(--white);cursor:pointer;display:grid;place-items:center}
+.ticks input:checked{background:var(--green);border-color:var(--green)}
+.ticks input:checked::after{content:"";width:10px;height:5px;border-left:1.5px solid var(--linen);border-bottom:1.5px solid var(--linen);transform:translateY(-1px) rotate(-45deg)}
+.tally{border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:10px;justify-items:start}
+.tally b{font:340 1.9rem/1 var(--f-d)}
+.tally span{font-size:.97rem;color:var(--ink-2)}
+.tips{margin-top:clamp(56px,7vw,96px)}
+.tips h3.col{font-size:clamp(1.6rem,2.4vw,2.1rem);padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.tipgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.tipgrid article{padding:26px 26px 30px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;align-content:start}
+.tipgrid article:not(:nth-child(4n+1)){padding-left:26px;border-left:1px solid var(--line)}
+.tipgrid h4{font:400 1.35rem/1.15 var(--f-d);letter-spacing:-.015em}
+.tipgrid p{font-size:.97rem;color:var(--ink-2)}
+@media (max-width:1040px){.tipgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.tipgrid article:not(:nth-child(4n+1)){padding-left:0;border-left:0}.tipgrid article:nth-child(even){padding-left:26px;border-left:1px solid var(--line)}}
+@media (max-width:900px){.jgrid{grid-template-columns:1fr}.jside{position:static}}
+@media (max-width:600px){.tipgrid{grid-template-columns:1fr}.tipgrid article:nth-child(n){padding:22px 0;border-left:0}.ticks{grid-template-columns:1fr}}
+
+/* process */
+.process{background:var(--oxblood)}
+.process .grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(36px,6vw,100px);align-items:start}
+.process .side{position:sticky;top:112px;display:grid;gap:26px}
+.process .side .ph{aspect-ratio:4/5;--tone:#4a1620}
+.steps li{display:grid;grid-template-columns:clamp(64px,8vw,116px) minmax(0,1fr);gap:8px 20px;padding:clamp(28px,3.6vw,46px) 0;border-top:1px solid rgba(241,238,229,.28)}
+.steps li:last-child{border-bottom:1px solid rgba(241,238,229,.28)}
+.steps .n{font:300 italic clamp(3rem,6vw,5rem)/.9 var(--f-d);color:var(--camel-l)}
+.steps h3{font-size:clamp(2rem,3.2vw,2.8rem);margin-bottom:10px}
+.steps p{color:rgba(241,238,229,.8);max-width:46ch}
+.start{margin-top:36px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.start p{color:rgba(241,238,229,.8);max-width:34ch;font-size:.98rem}
+@media (max-width:900px){.process .grid{grid-template-columns:1fr}.process .side{position:static}.process .side .ph{aspect-ratio:16/11}}
+
+
+/* more ways */
+.more .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.more article{padding:30px 30px 34px 0;display:grid;gap:12px;align-content:start;justify-items:start}
+.more article+article{padding-left:30px;border-left:1px solid var(--line)}
+.more h3{font-size:clamp(1.5rem,2.2vw,1.9rem)}
+.more p{color:var(--ink-2);font-size:.99rem}
+.more .k{font:400 italic 1.05rem var(--f-d);color:var(--oxblood)}
+.more a.lnk{font-weight:500;margin-top:4px}
+@media (max-width:900px){.more .trio{grid-template-columns:1fr}.more article,.more article+article{padding:26px 0;border-left:0}.more article+article{border-top:1px solid var(--line)}}
+/* style note signup */
+.note-up{margin-top:clamp(56px,7vw,96px);background:var(--green);color:var(--linen);padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.note-up h3{font-size:clamp(1.8rem,3vw,2.6rem)}
+.note-up p{color:rgba(241,238,229,.8);margin-top:12px;max-width:42ch}
+.note-up form{display:grid;gap:10px}
+.note-up .row{display:flex;gap:10px}
+.note-up label{font-weight:500;font-size:.95rem}
+.note-up input{flex:1;min-width:0;min-height:52px;padding:13px 15px;font:400 1rem var(--f-b);color:var(--ink);background:var(--linen);border:1px solid var(--linen);border-radius:2px}
+.note-up input:focus{outline:2px solid var(--camel);outline-offset:2px}
+.note-up .fine{font-size:.88rem;color:rgba(241,238,229,.66);margin:0}
+@media (max-width:900px){.note-up{grid-template-columns:1fr}}
+@media (max-width:480px){.note-up .row{flex-direction:column}}
+
+/* wardrobe (looks) */
+.looks .top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,52px)}
+.looks .top .head{margin:0}
+.arrows{display:flex;gap:8px}
+.arrows button{width:52px;height:52px;border:1px solid var(--ink);background:none;color:var(--ink);border-radius:50%;cursor:pointer;display:grid;place-items:center;transition:background .3s,color .3s}
+.arrows button:hover{background:var(--ink);color:var(--linen)}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-inline:max(22px,calc((100vw - var(--wrap))/2 + 22px));scroll-padding-inline:max(22px,calc((100vw - var(--wrap))/2 + 22px))}
+.rail::-webkit-scrollbar{display:none}
+.look{flex:none;width:clamp(248px,25vw,340px);scroll-snap-align:start}
+.look .ph{aspect-ratio:3/4.1}
+.look img{transition:transform 1.2s var(--ease)}
+.look:hover img{transform:scale(1.04)}
+.look figcaption{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding-top:14px}
+.look figcaption b{font:400 1.3rem var(--f-d)}
+.look figcaption span{font-size:.9rem;color:var(--ink-2)}
+.occ{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:clamp(30px,4vw,48px);align-items:center}
+.occ span{font-size:.95rem;color:var(--ink-2);margin-right:6px}
+.occ b{font:400 1.05rem var(--f-d);padding:8px 16px;border:1px solid var(--line);border-radius:99px;background:var(--white)}
+
+/* details */
+.details{background:var(--camel-l)}
+.details .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.details .lede{color:#4d4539}
+.four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);margin-top:26px}
+.four div{padding:16px 16px 0 0}
+.four b{display:block;font:400 1.3rem var(--f-d)}
+.four span{font-size:.92rem;color:#4d4539}
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(130px,15vw,220px);gap:14px}
+.mosaic figure{position:relative}
+.mosaic .ph{height:100%}
+.mosaic figcaption{position:absolute;left:0;bottom:0;background:var(--camel-l);padding:7px 12px 0 0;font:400 italic 1rem var(--f-d)}
+.m1{grid-column:span 5;grid-row:span 2}.m2{grid-column:span 4}.m3{grid-column:span 3;grid-row:span 2}.m4{grid-column:span 4}.m5{grid-column:span 7}.m6{grid-column:span 5}
+@media (max-width:900px){.details .top{grid-template-columns:1fr}.four{grid-template-columns:repeat(2,minmax(0,1fr))}.four div{padding-bottom:14px}
+  .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:44vw}.mosaic figure{grid-column:span 1;grid-row:span 1}.m1,.m5{grid-column:span 2}}
+
+/* founders */
+.founders .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(22px,3vw,40px);align-items:stretch}
+.fgrid .main{--tone:var(--green);min-height:clamp(420px,52vw,700px)}
+.fgrid .col{display:grid;gap:clamp(22px,3vw,40px);grid-template-rows:auto 1fr}
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink)}
+.people div{padding:20px 20px 4px 0}
+.people div+div{padding-left:20px;border-left:1px solid var(--line)}
+.people b{display:block;font:400 clamp(1.5rem,2.2vw,2rem)/1.1 var(--f-d);letter-spacing:-.02em}
+.people span{display:block;color:var(--ink-2);font-size:.95rem;margin-top:6px}
+.people i{display:block;font:400 italic 1.05rem var(--f-d);color:var(--oxblood);margin-top:10px}
+.fgrid .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-height:240px}
+.fgrid .duo .ph:first-child{--tone:var(--blue-d)}.fgrid .duo .ph:last-child{--tone:var(--oxblood)}
+@media (max-width:900px){.founders .top,.fgrid{grid-template-columns:1fr}.fgrid .main{min-height:0;aspect-ratio:4/5}.fgrid .duo{min-height:0}.fgrid .duo .ph{aspect-ratio:3/4}}
+
+/* follow */
+.follow{background:var(--linen-2);padding-block:clamp(56px,7vw,96px)}
+.follow .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.follow h2{font-size:clamp(1.9rem,3.4vw,2.9rem)}
+.social{display:flex;gap:10px}
+.social a{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:10px 18px;border:1px solid var(--ink);border-radius:99px;text-decoration:none;font-weight:500;font-size:.98rem;transition:background .3s,color .3s}
+.social a:hover{background:var(--ink);color:var(--linen)}
+.social .ic{width:20px;height:20px}
+.strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.strip a{position:relative;display:block}
+.strip .ph{aspect-ratio:1}
+.strip a::after{content:"";position:absolute;inset:0;background:rgba(6,26,51,0);transition:background .35s}
+.strip a:hover::after{background:rgba(6,26,51,.38)}
+.strip a:nth-child(1) .ph{--tone:var(--green)}.strip a:nth-child(2) .ph{--tone:var(--oxblood)}.strip a:nth-child(3) .ph{--tone:var(--blue-d)}.strip a:nth-child(4) .ph{--tone:#8a6a44}.strip a:nth-child(5) .ph{--tone:var(--green-2)}
+@media (max-width:760px){.strip{grid-template-columns:repeat(3,minmax(0,1fr))}.strip a:nth-child(n+4){display:none}.social a span{display:none}.social a{padding:0;width:48px;justify-content:center}}
+
+/* faq */
+.faq .grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,6vw,100px);align-items:start}
+.faq .side{position:sticky;top:112px;display:grid;gap:20px;justify-items:start}
+.qa{border-top:1px solid var(--ink)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font:400 clamp(1.2rem,1.7vw,1.45rem)/1.25 var(--f-d)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{flex:none;width:34px;height:34px;border:1px solid var(--ink);border-radius:50%;position:relative;transition:background .3s,transform .4s var(--ease)}
+.qa summary .pm::before,.qa summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:currentColor;transition:transform .4s var(--ease)}
+.qa summary .pm::after{transform:rotate(90deg)}
+.qa details[open] .pm{background:var(--ink);color:var(--linen)}
+.qa details[open] .pm::after{transform:rotate(0)}
+.qa .a{padding:0 54px 24px 0;color:var(--ink-2);max-width:62ch}
+@media (max-width:900px){.faq .grid{grid-template-columns:1fr}.faq .side{position:static}.qa .a{padding-right:0}}
+
+/* contact */
+.contact{background:var(--green)}
+.contact .grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(36px,6vw,96px);align-items:start}
+.contact .stack{display:grid;gap:24px;justify-items:start}
+.contact h2{font-size:clamp(2.5rem,5.4vw,4.6rem)}
+.ways{width:100%;border-top:1px solid rgba(241,238,229,.4)}
+.ways a{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 18px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(241,238,229,.18);text-decoration:none;transition:padding .35s var(--ease)}
+.ways a:hover{padding-left:8px}
+.ways .dot{width:48px;height:48px;border:1px solid rgba(241,238,229,.5);border-radius:50%;display:grid;place-items:center;grid-row:span 2;transition:background .3s,color .3s}
+.ways a:hover .dot{background:var(--camel);color:var(--ink);border-color:var(--camel)}
+.ways .ic{width:20px;height:20px}
+.ways small{font-size:.88rem;color:rgba(241,238,229,.68)}
+.ways b{font:400 clamp(1.1rem,1.6vw,1.3rem)/1.2 var(--f-d);overflow-wrap:anywhere}
+.form{background:var(--white);color:var(--ink);padding:clamp(26px,3.6vw,46px);display:grid;gap:22px;clip-path:polygon(30px 0,calc(100% - 30px) 0,100% 30px,100% 100%,0 100%,0 30px)}
+.form h3{font-size:clamp(1.7rem,2.6vw,2.2rem);margin-top:16px}
+.form>p{color:var(--ink-2);font-size:.98rem;margin-top:-10px}
+.form label,.form legend{display:block;font-weight:500;font-size:.95rem;margin-bottom:9px;padding:0}
+.form fieldset{border:0;padding:0;margin:0;min-width:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{margin:0;cursor:pointer}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:block;padding:10px 16px;border:1px solid rgba(11,22,38,.32);border-radius:99px;font-weight:400;font-size:.95rem;transition:background .25s,color .25s,border-color .25s}
+.opts input:checked+span{background:var(--green);border-color:var(--green);color:var(--linen)}
+.opts input:focus-visible+span{outline:2px solid var(--camel);outline-offset:2px}
+.form input[type=text],.form input[type=tel],.form input[type=email],.form textarea{width:100%;min-height:52px;padding:13px 15px;font:400 1rem var(--f-b);color:var(--ink);background:var(--linen);border:1px solid rgba(11,22,38,.3);border-radius:2px}
+.form textarea{min-height:108px;resize:vertical}
+.form input:focus,.form textarea:focus{outline:2px solid var(--green);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .fine{font-size:.88rem;color:var(--ink-2)}
+@media (max-width:900px){.contact .grid{grid-template-columns:1fr}}
+@media (max-width:540px){.two{grid-template-columns:1fr}}
+
+/* footer */
+.ftr{background:var(--green-2);color:var(--linen);padding-block:clamp(56px,7vw,92px) calc(28px + env(safe-area-inset-bottom,0px))}
+.ftr .top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr) minmax(0,.8fr) minmax(0,1.25fr);gap:40px 36px;padding-bottom:48px}
+.ftr .seal{display:block;width:120px;height:120px}
+.ftr .seal img{width:100%;height:100%;object-fit:contain}
+.ftr .line{font:300 italic 1.35rem/1.3 var(--f-d);color:rgba(241,238,229,.8);margin-top:18px;max-width:22ch}
+.ftr h4{font:500 .95rem var(--f-b);color:var(--camel-l);margin-bottom:16px}
+.ftr li+li{margin-top:10px}
+.ftr li{overflow-wrap:break-word}
+.ftr a{text-decoration:none;color:rgba(241,238,229,.84);transition:color .25s}
+.ftr a:hover{color:#fff;text-decoration:underline}
+.icons{display:flex;gap:10px;margin-top:26px}
+.icons a{width:48px;height:48px;border:1px solid rgba(241,238,229,.4);border-radius:50%;display:grid;place-items:center;color:var(--linen);transition:background .3s,color .3s,border-color .3s}
+.icons a:hover{background:var(--camel);border-color:var(--camel);color:var(--ink);text-decoration:none}
+.icons .ic{width:20px;height:20px}
+.ftr .bot{display:flex;justify-content:space-between;align-items:center;gap:14px 24px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(241,238,229,.16);font-size:.9rem;color:rgba(241,238,229,.62)}
+.ftr .bot a{display:inline-flex;align-items:center;gap:8px}
+@media (max-width:900px){.ftr .top{grid-template-columns:1fr 1fr}.ftr .top>div:first-child{grid-column:1/-1}.ftr{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+/* mobile book bar */
+.mbar{display:none}
+@media (max-width:900px){
+  .mbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:45;background:rgba(241,238,229,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .5s var(--ease)}
+  .mbar.on{transform:none}
+  .mbar .btn{flex:1;min-height:50px;padding:10px}
+  .mbar .sq{flex:none;width:50px;padding:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6.5L20.500 7"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.500"/></symbol>
+  <symbol id="i-hanger" viewBox="0 0 24 24"><path d="M12 8.500V7.800a2.300 2.300 0 1 0-2.300-2.300M12 8.500 2.800 15.200c-.9.700-.4 2.300.8 2.300h16.800c1.200 0 1.700-1.600.8-2.300L12 8.500z"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.500 4.500v6.300c0 .5.2 1 .6 1.400l7.700 7.700a2 2 0 0 0 2.800 0l5.300-5.300a2 2 0 0 0 0-2.800l-7.700-7.700a2 2 0 0 0-1.400-.6H4.500a1 1 0 0 0-1 1z"/><circle cx="8" cy="8" r="1.300"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><path d="M8.500 13.500s1.300 2 3.500 2 3.500-2 3.500-2M9 9.500h.01M15 9.500h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.500-5.600-6.500-10.500a6.500 6.500 0 0 1 13 0C18.500 15.400 12 21 12 21z"/><circle cx="12" cy="10.300" r="2.300"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M14.500 5.500 8 12l6.500 6.500"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9.500 5.500 16 12l-6.500 6.500"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5.500 11.500 12 5l6.500 6.500"/></symbol>
+</svg>
+
+<div class="note"><div class="wrap"><span>Private consultations by appointment in Phoenix and Scottsdale.</span><a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Choose a time</a></div></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Valet Club, home"><img class="lt" src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-tag-logo.png&amp;w=256&amp;q=75" alt="" width="40" height="40"><img class="lw" src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-club-wordmark.png&amp;w=640&amp;q=75" alt="The Valet Club" width="138" height="46"></a>
+    <nav id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#approach">Our approach</a>
+      <a href="#founders">About us</a>
+      <a href="#journal">Journal</a>
+      <a href="#faq">Questions</a>
+      <a href="#contact">Contact</a>
+      <a class="m-only" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
+    </nav>
+    <a class="btn book" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<section class="hero on-dark" aria-labelledby="h1">
+  <div class="wrap grid">
+    <div class="copy">
+      <h1 id="h1"><span>Dress well.</span><span class="l2">Live effortlessly.</span></h1>
+      <p class="lede">A private styling service for men who value their time, their presence, and a wardrobe built with intention.</p>
+      <div class="cta">
+        <a class="btn camel" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
+        <a class="btn ghost" href="#services">View services and pricing</a>
+      </div>
+      <p class="where"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Phoenix and Scottsdale, by appointment</p>
+    </div>
+    <div class="shot">
+      <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-editorial-standing.JPG&amp;w=640&amp;q=75" alt="Riley Richardson and Lexi Smith, founders of The Valet Club" fetchpriority="high"></div>
+      <div class="hangtag" aria-hidden="true"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-tag-logo.png&amp;w=256&amp;q=75" alt="" width="64" height="64"><span>Wardrobe edits<br>Personal shopping<br>Occasion dressing</span></div>
+    </div>
+  </div>
+  <div class="promise"><div class="wrap">
+    <ul>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-hanger"/></svg><b>No clothing minimum</b><span>Buy one piece or a whole wardrobe. There’s no spend requirement.</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-tag"/></svg><b>No markup</b><span>You pay the store’s price for your clothes. We don’t add to it.</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg><b>No pressure to purchase</b><span>We recommend. You decide what you love.</span></li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="sec intro" aria-label="What we do">
+  <div class="wrap grid">
+    <div class="stack">
+      <p class="big">Most men don’t need more clothes. They need the right ones, and someone to put them together.</p>
+      <p class="lede">That’s the work. We learn how you live, edit what you own, find what’s missing, and leave you with outfits you can reach for without thinking.</p>
+      <ul class="offer">
+        <li><b>Wardrobe edits</b><span>We go through your closet with you: what works, what to retire, and new outfits from what’s already there.</span></li>
+        <li><b>Personal shopping</b><span>Tell us what you need. We find it and bring you complete looks to choose from.</span></li>
+        <li><b>Occasion dressing</b><span>A wedding, a big meeting, a trip. We make sure you’re dressed for it.</span></li>
+      </ul>
+      <p class="signoff">Riley &amp; Lexi</p>
+    </div>
+    <div class="pair">
+      <div class="ph a"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-portrait.JPG&amp;w=640&amp;q=75" alt="The founders of The Valet Club" loading="lazy"></div>
+      <div class="ph b"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-cards-closeup.JPG&amp;w=640&amp;q=75" alt="The Valet Club styling cards, close up" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec services" id="services" aria-labelledby="h-svc">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-svc">Services and pricing</h2>
+      <p class="lede" style="color:#3b4a5c">Three ways to work with us. Start with what you own, add a few complete looks, or hand us the whole picture.</p>
+    </div>
+    <div class="tags">
+      <div class="tagwrap"><article class="tag">
+        <div class="top">
+          <div class="meta"><span>1–2 hours</span></div>
+          <h3>The Closet Audit</h3>
+          <p>Start with what you already own. We identify what works, what to retire, new outfit combinations, and the key pieces that will elevate your wardrobe.</p>
+          <ul><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Full closet review</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Outfits from your existing wardrobe</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Wardrobe gap analysis</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Recommendations for key pieces</span></li></ul>
+          <p class="best">Best if your closet is full and you still have nothing to wear.</p>
+        </div>
+        <div class="stub"><div class="price"><b>$300</b><span>per session</span></div><a class="btn" href="#contact" data-pick="The Closet Audit">Book the Closet Audit</a></div>
+      </article></div>
+      <div class="tagwrap"><article class="tag">
+        <div class="top">
+          <div class="meta"><span>3–5 complete looks</span><span class="lim">Founding member price, limited time</span></div>
+          <h3>The Men’s Club</h3>
+          <p>You tell us what you need. We find it. You decide what you love.</p>
+          <ul><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>30–45 minute style consultation</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Personalized outfit curation</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Shopping guidance</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>One-hour outfit review</span></li></ul>
+          <p class="best">Best if you know what’s missing and want it handled.</p>
+        </div>
+        <div class="stub"><div class="price"><b>$500</b><span>founding member investment</span></div><a class="btn" href="#contact" data-pick="The Men’s Club">Join The Men’s Club</a></div>
+      </article></div>
+      <div class="tagwrap"><article class="tag feature">
+        <div class="top">
+          <div class="meta"><span>The complete experience</span></div>
+          <h3>The Exclusive</h3>
+          <p>For the man who wants more than a few new outfits: a complete approach to refining his personal style, wardrobe, and overall image.</p>
+          <ul><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Closet Audit included</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>5–7 complete curated looks</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Accessory and shopping curation</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Outfit review and final fit session</span></li></ul>
+          <p class="best">Best if you want the whole wardrobe sorted, start to finish.</p>
+        </div>
+        <div class="stub"><div class="price"><span>Starting at</span><b>$1,495</b></div><a class="btn camel" href="#contact" data-pick="The Exclusive">Start The Exclusive</a></div>
+      </article></div>
+    </div>
+
+    <div class="compare">
+      <h3>Compare the three</h3>
+      <p>Everything included in each service, side by side.<span class="swipe"> Swipe the table to see all three.</span></p>
+      <div class="tblwrap" tabindex="0" role="region" aria-label="Service comparison">
+        <table>
+          <thead><tr><th scope="col"><span class="sr">What’s included</span></th><th scope="col">Closet Audit</th><th scope="col">Men’s Club</th><th scope="col">The Exclusive</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Full closet review</th><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Outfits from your existing wardrobe</th><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Wardrobe gap analysis</th><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Style consultation</th><td class="no">–<span class="sr">Not included</span></td><td class="v">30–45 min</td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Complete curated looks</th><td class="no">–<span class="sr">Not included</span></td><td class="v">3–5</td><td class="v">5–7</td></tr>
+            <tr><th scope="row">Shopping guidance</th><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Accessory curation</th><td class="no">–<span class="sr">Not included</span></td><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Outfit review</th><td class="no">–<span class="sr">Not included</span></td><td class="v">One hour</td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Final fit session</th><td class="no">–<span class="sr">Not included</span></td><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
+            <tr><th scope="row">Price</th><td class="v">$300</td><td class="v">$500</td><td class="v">From $1,495</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="quiz" id="quiz" aria-labelledby="h-quiz">
+      <div>
+        <h3 id="h-quiz">Not sure which one fits?</h3>
+        <p class="intro-p">Answer three quick questions and we’ll point you to the right service.</p>
+        <p class="prog" id="qprog" aria-live="polite">Question 1 of 3</p>
+      </div>
+      <div>
+        <div class="q on" data-q="0"><p class="qq">What do you want most right now?</p>
+          <button type="button" data-s="a">To get more out of the clothes I already own</button>
+          <button type="button" data-s="c">A few new outfits I can rely on</button>
+          <button type="button" data-s="e">My whole wardrobe sorted, start to finish</button></div>
+        <div class="q" data-q="1"><p class="qq">How does your closet feel today?</p>
+          <button type="button" data-s="a">Full, but I still have nothing to wear</button>
+          <button type="button" data-s="c">Mostly fine, with a few gaps</button>
+          <button type="button" data-s="e">Like it needs a fresh start</button></div>
+        <div class="q" data-q="2"><p class="qq">How involved do you want to be?</p>
+          <button type="button" data-s="a">Show me how to make it work myself</button>
+          <button type="button" data-s="c">Bring me options and I’ll choose</button>
+          <button type="button" data-s="e">Handle it for me</button></div>
+        <div class="res" id="qres" aria-live="polite">
+          <small>We’d start you with</small>
+          <b id="qname"></b>
+          <p id="qwhy"></p>
+          <div class="row"><a class="btn camel" href="#contact" id="qgo">Request this service</a><button type="button" class="again" id="qagain">Start over</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec process on-dark" id="approach" aria-labelledby="h-app">
+  <div class="wrap grid">
+    <div class="side">
+      <h2 id="h-app">A wardrobe that feels like you.</h2>
+      <p class="lede">Every engagement follows the same three steps, whichever service you choose.</p>
+      <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-working.JPG&amp;w=640&amp;q=75" alt="The founders at work on a client’s looks" loading="lazy"></div>
+    </div>
+    <div>
+      <ol class="steps">
+        <li><span class="n" aria-hidden="true">1</span><div><h3>Discover</h3><p>We begin with your lifestyle, preferences, goals, and the way you want to feel.</p></div></li>
+        <li><span class="n" aria-hidden="true">2</span><div><h3>Curate</h3><p>Every recommendation is selected for fit, versatility, quality, and enduring relevance.</p></div></li>
+        <li><span class="n" aria-hidden="true">3</span><div><h3>Refine</h3><p>We perfect the details and leave you with a wardrobe that works without the guesswork.</p></div></li>
+      </ol>
+      <div class="start">
+        <a class="btn camel" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a discovery call</a>
+        <p>It starts with a private call about your wardrobe, your goals, and the right service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec more" id="more" aria-labelledby="h-more">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-more">More ways we can help</h2>
+      <p class="lede">Styling works for more than one closet. Ask us about any of these.</p>
+    </div>
+    <div class="trio">
+      <article><p class="k">For someone else</p><h3>Gift a Closet Audit</h3><p>A session with a stylist is a present he’ll use every morning. Give The Closet Audit for a birthday, the holidays or Father’s Day.</p><a class="lnk" href="mailto:thevaletclubstyling@gmail.com?subject=Gift%20a%20Closet%20Audit">Ask about gifting</a></article>
+      <article><p class="k">For the big day</p><h3>Grooms and wedding parties</h3><p>From the suit to the shoes to the groomsmen standing next to you. We’ll make sure everyone looks right and nobody has to think about it.</p><a class="lnk" href="mailto:thevaletclubstyling@gmail.com?subject=Wedding%20styling">Ask about wedding styling</a></article>
+      <article><p class="k">For work</p><h3>Teams and offices</h3><p>A styling session for a sales team, new leaders or a whole office. Practical advice on dressing for the role and the room.</p><a class="lnk" href="mailto:thevaletclubstyling@gmail.com?subject=Team%20styling%20session">Ask about team sessions</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec looks" aria-labelledby="h-looks">
+  <div class="wrap"><div class="top">
+    <div class="head">
+      <h2 id="h-looks">Dressed for wherever you’re going</h2>
+      <p class="lede">Tell us what’s on the calendar and we’ll build the looks around it.</p>
+    </div>
+    <div class="arrows"><button type="button" id="prev" aria-label="Previous looks"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg></button><button type="button" id="next" aria-label="More looks"><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></div>
+  </div></div>
+  <div class="rail" id="rail" tabindex="0" role="region" aria-label="Example looks">
+    <figure class="look"><div class="ph" style="--tone:#2B4A6B"><img src="https://images.unsplash.com/photo-1603394151492-5e9b974b090b?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The blue suit" loading="lazy"></div><figcaption><b>The blue suit</b><span>Work</span></figcaption></figure>
+    <figure class="look"><div class="ph" style="--tone:#5a5d60"><img src="https://images.unsplash.com/photo-1515736076039-a3ca66043b27?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Soft grey tailoring" loading="lazy"></div><figcaption><b>Soft grey tailoring</b><span>Dinner</span></figcaption></figure>
+    <figure class="look"><div class="ph" style="--tone:#1A1815"><img src="https://images.unsplash.com/photo-1546572797-e8c933a75a1f?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The tuxedo" loading="lazy"></div><figcaption><b>The tuxedo</b><span>Black tie</span></figcaption></figure>
+    <figure class="look"><div class="ph" style="--tone:#143D30"><img src="https://images.unsplash.com/photo-1593030103066-0093718efeb9?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Sharp in navy" loading="lazy"></div><figcaption><b>Sharp in navy</b><span>Weddings</span></figcaption></figure>
+    <figure class="look"><div class="ph" style="--tone:#641E2B"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The everyday jacket" loading="lazy"></div><figcaption><b>The everyday jacket</b><span>Office</span></figcaption></figure>
+    <figure class="look"><div class="ph" style="--tone:#8a6a44"><img src="https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The dark blazer" loading="lazy"></div><figcaption><b>The dark blazer</b><span>Travel</span></figcaption></figure>
+  </div>
+  <div class="wrap"><div class="occ"><span>We dress clients for</span><b>The office</b><b>Client dinners</b><b>Weddings</b><b>Black tie</b><b>Travel</b><b>Weekends</b><b>A full refresh</b></div></div>
+</section>
+
+<section class="sec details" aria-labelledby="h-det">
+  <div class="wrap">
+    <div class="top">
+      <h2 id="h-det">Considered down to every detail.</h2>
+      <div>
+        <p class="lede">Every recommendation is chosen with your lifestyle, confidence, and personal point of view in mind.</p>
+        <div class="four"><div><b>Fit</b><span>Right for your build</span></div><div><b>Versatility</b><span>Works across your week</span></div><div><b>Quality</b><span>Made to last</span></div><div><b>Relevance</b><span>Won’t date in a season</span></div></div>
+      </div>
+    </div>
+    <div class="mosaic">
+      <figure class="m1"><div class="ph" style="--tone:#2B4A6B"><img src="https://images.unsplash.com/photo-1633655442330-0b44ca0cce9b?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Cloth" loading="lazy"></div><figcaption>Cloth</figcaption></figure>
+      <figure class="m2"><div class="ph" style="--tone:#143D30"><img src="https://images.unsplash.com/photo-1604727199378-bf5dd08726ad?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Watches" loading="lazy"></div><figcaption>Watches</figcaption></figure>
+      <figure class="m3"><div class="ph" style="--tone:#641E2B"><img src="https://images.unsplash.com/photo-1542702942-01343dd60a84?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Shoes" loading="lazy"></div><figcaption>Shoes</figcaption></figure>
+      <figure class="m4"><div class="ph" style="--tone:#5a5d60"><img src="https://images.unsplash.com/photo-1705493253575-e911888621ff?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Texture" loading="lazy"></div><figcaption>Texture</figcaption></figure>
+      <figure class="m5"><div class="ph" style="--tone:#8a6a44"><img src="https://images.unsplash.com/photo-1637868796504-32f45a96d5a0?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Leather goods" loading="lazy"></div><figcaption>Leather goods</figcaption></figure>
+      <figure class="m6"><div class="ph" style="--tone:#0E2E24"><img src="https://images.unsplash.com/photo-1633655442432-620aa55d7ac1?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="The rack" loading="lazy"></div><figcaption>The rack</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec founders" id="founders" aria-labelledby="h-f">
+  <div class="wrap">
+    <div class="top">
+      <h2 id="h-f">Meet the founders</h2>
+      <p class="lede">The Valet Club was built from a shared passion for styling, and is dedicated to helping men feel confident in what they wear.</p>
+    </div>
+    <div class="fgrid">
+      <div class="ph main"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-seated.JPG&amp;w=640&amp;q=75" alt="Riley Richardson and Lexi Smith, founders of The Valet Club" loading="lazy"></div>
+      <div class="col">
+        <div>
+          <p class="lede" style="margin-bottom:26px">Riley is a Texas native and Lexi is an Arizona native. They share a love for California and the effortless style it inspires. Together they bring different perspectives and a creative twist to men’s style, with one aim: wardrobes that feel confident, personal, and your own.</p>
+          <div class="people">
+            <div><b>Riley Richardson</b><span>Co-founder and personal stylist</span><i>From Texas</i></div>
+            <div><b>Lexi Smith</b><span>Co-founder and personal stylist</span><i>From Arizona</i></div>
+          </div>
+        </div>
+        <div class="duo">
+          <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-standing-variety.jpeg&amp;w=640&amp;q=75" alt="The founders standing together" loading="lazy"></div>
+          <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-couch-variety.jpeg&amp;w=640&amp;q=75" alt="The founders reviewing looks together" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="follow" aria-labelledby="h-fol">
+  <div class="wrap">
+    <div class="top">
+      <h2 id="h-fol">Follow along <i>@valetclubstyling</i></h2>
+      <div class="social">
+        <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="The Valet Club on Instagram"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram</span></a>
+        <a href="https://tiktok.com/@thevaletclubstyling" target="_blank" rel="noopener" aria-label="The Valet Club on TikTok"><svg class="ic fill" aria-hidden="true"><use href="#i-tt"/></svg><span>TikTok</span></a>
+      </div>
+    </div>
+    <div class="strip">
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fclipboard-portrait.jpeg&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-editorial-standing.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-cards-closeup.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-portrait.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-working.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec journal" id="journal" aria-labelledby="h-j">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-j">The Journal</h2>
+      <p class="lede">What’s happening in menswear, what it means for your closet, and the advice we give every client.</p>
+    </div>
+    <div class="jgrid">
+      <div>
+        <h3 class="col">In menswear now</h3>
+        <p class="asof">Updated November 2026</p>
+        <ul class="news">
+          <li><h4>Slimmer tailoring is back on the runway</h4><p>Fall 2026 collections brought narrower cuts and sharper proportions back into view, with Prada and Saint Laurent leading the way.</p><p class="take">Our take: You don’t need new suits. A good tailor can taper what you own, and that’s the first thing we look at in a Closet Audit.</p><p class="src">Source: <a href="https://thewed.com/magazine/groom-trends-from-the-fall-winter-2026-menswear-season" target="_blank" rel="noopener">The Wed</a></p></li>
+          <li><h4>Winter is preppy, with a sporty twist</h4><p>This season mixes classic tailoring and coats with practical touches such as toggles, hoods and extra pockets.</p><p class="take">Our take: Easy to wear in Arizona: an oxford shirt and blazer over something relaxed looks current without trying hard.</p><p class="src">Source: <a href="https://www.wallpaper.com/fashion-beauty/mens-aw-2026-winter-fashion-inspiration" target="_blank" rel="noopener">Wallpaper*</a>, 2 November 2026</p></li>
+          <li><h4>Color returns to cold-weather dressing</h4><p>Designers broke up the usual dark palette with teal, purple and other bright accents for fall and winter.</p><p class="take">Our take: Start small. One colored knit or a pocket square against navy or grey does the job.</p><p class="src">Source: <a href="https://www.out.com/fashion/menswear-trends-fall-winter-2026" target="_blank" rel="noopener">Out</a></p></li>
+          <li><h4>The tie isn’t going anywhere</h4><p>Ties stayed on the fall 2026 runways, worn loose, tucked in, or layered under knitwear.</p><p class="take">Our take: A knit tie with an open-weave blazer is the relaxed version. Keep it for dinners and events.</p><p class="src">Source: <a href="https://coveteur.com/tie-trend-fw26" target="_blank" rel="noopener">Coveteur</a></p></li>
+          <li><h4>Looking ahead: spring 2027 goes colorful and collegiate</h4><p>Next spring’s shows in Paris and Milan favored sorbet-colored polos, lighter tailoring and preppy classics with a playful edge.</p><p class="take">Our take: Good news for the desert. Light polos and unlined jackets are exactly what works here from March on.</p><p class="src">Source: <a href="https://luxe.outlookindia.com/fashion-beauty/couture/why-the-colorful-preppy-look-is-ss27s-biggest-menswear-trend" target="_blank" rel="noopener">Outlook Luxe</a>, 25 July 2026</p></li>
+          <li><h4>Also for spring: clothes built for travel</h4><p>Travel-ready wardrobes and lighter layers ran through the spring 2027 menswear collections.</p><p class="take">Our take: If you’re on a plane twice a month, tell us. We’ll build looks that pack flat and mix across a week.</p><p class="src">Source: <a href="https://theimpression.com/the-spring-2027-collection-trend-forecast/" target="_blank" rel="noopener">The Impression</a></p></li>
+        </ul>
+      </div>
+      <aside class="jside" aria-label="Guides">
+        <div class="card desert">
+          <h3>Dressing well in the desert</h3>
+          <p>Phoenix and Scottsdale ask more of a wardrobe than most cities. Five rules we use for Arizona clients.</p>
+          <ul>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Pick cloth that breathes.</b> Linen, cotton-linen blends, seersucker and lightweight wool let heat out.</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Go lighter in color.</b> Stone, tan, light blue and off-white stay cooler in the sun than navy and black.</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Choose unlined jackets.</b> An unstructured blazer gives you the polish without the insulation.</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Keep one layer handy.</b> Offices and restaurants run cold. A fine knit over the shoulders solves it.</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><b>Swap boots for loafers.</b> Loafers with no-show socks keep a tailored look comfortable in the heat.</span></li>
+          </ul>
+        </div>
+        <div class="card list">
+          <h3>The foundation wardrobe</h3>
+          <p>Twelve pieces that cover most of a man’s week. Tick off what you own.</p>
+          <div class="ticks" id="ticks">
+            <label><input type="checkbox">Navy blazer</label>
+            <label><input type="checkbox">Grey wool trousers</label>
+            <label><input type="checkbox">Dark denim</label>
+            <label><input type="checkbox">White oxford shirt</label>
+            <label><input type="checkbox">Light blue shirt</label>
+            <label><input type="checkbox">Fine knit sweater</label>
+            <label><input type="checkbox">Polo or good tee</label>
+            <label><input type="checkbox">Chinos</label>
+            <label><input type="checkbox">Navy or charcoal suit</label>
+            <label><input type="checkbox">Brown leather shoes</label>
+            <label><input type="checkbox">Clean white sneakers</label>
+            <label><input type="checkbox">Leather belt</label>
+          </div>
+          <div class="tally"><b id="tcount" aria-live="polite">0 of 12</b><span id="tmsg">Tick what’s already in your closet.</span><a class="btn" href="#contact" data-pick="The Closet Audit">Find my gaps with a Closet Audit</a></div>
+        </div>
+      </aside>
+    </div>
+    <div class="tips">
+      <h3 class="col">Style notes we give every client</h3>
+      <div class="tipgrid">
+        <article><h4>Fit comes first</h4><p>The shoulder seam should sit at the edge of your shoulder. Show a little shirt cuff past the jacket sleeve. Trousers should just touch the shoe.</p></article>
+        <article><h4>Build around three colors</h4><p>Navy, grey and one that’s yours, such as olive, brown or burgundy. When most pieces share a palette, everything goes with everything.</p></article>
+        <article><h4>A tailor is the best-value upgrade</h4><p>Hemming trousers, slimming a sleeve or taking in a waist costs little and makes mid-priced clothes look expensive.</p></article>
+        <article><h4>Spend where you wear</h4><p>Put the money into shoes, a jacket and a watch you’ll wear weekly. Think cost per wear, not price tag.</p></article>
+        <article><h4>One point of interest</h4><p>A textured jacket, a patterned shirt or a strong shoe. Pick one per outfit and keep the rest quiet.</p></article>
+        <article><h4>Match your leathers</h4><p>Belt and shoes should be close in color and finish. Brown with brown, black with black.</p></article>
+        <article><h4>Dress for the room, plus one</h4><p>Work out what most people will wear, then go one step sharper. You’ll never be the one underdressed.</p></article>
+        <article><h4>Look after what you own</h4><p>Wooden hangers for jackets, shoe trees for leather shoes, and a steamer between wears keep clothes looking new for years.</p></article>
+      </div>
+    </div>
+
+    <div class="note-up" id="style-note">
+      <div><h3>Get The Style Note</h3><p>Seasonal advice from Riley and Lexi: what to wear now, what to skip, and what’s worth buying.</p></div>
+      <form id="noteform" novalidate>
+        <label for="nemail">Your email</label>
+        <div class="row"><input id="nemail" type="email" autocomplete="email" placeholder="you@example.com"><button class="btn camel" type="submit">Join the list</button></div>
+        <p class="fine" id="nfine">This opens an email to us so we can add you.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" id="faq" aria-labelledby="h-faq">
+  <div class="wrap grid">
+    <div class="side">
+      <h2 id="h-faq">Questions, answered</h2>
+      <p class="lede">Something else on your mind? Send us a note and we’ll get back to you.</p>
+      <a class="btn ghost" href="mailto:thevaletclubstyling@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email us</a>
+    </div>
+    <div class="qa">
+      <details open><summary>Which service should I start with?<span class="pm" aria-hidden="true"></span></summary><p class="a">If you’d like to get more from what you already own, start with The Closet Audit. If you know you need new outfits, The Men’s Club gets you 3–5 complete looks. If you want everything handled, including an audit, 5–7 looks, accessories and a final fit session, choose The Exclusive. A discovery call will help you decide.</p></details>
+      <details><summary>Do I have to buy a certain amount of clothing?<span class="pm" aria-hidden="true"></span></summary><p class="a">No. There’s no clothing minimum and no pressure to purchase. We make recommendations, and you buy only what you love.</p></details>
+      <details><summary>Do you mark up the clothes you recommend?<span class="pm" aria-hidden="true"></span></summary><p class="a">No. There’s no markup. Your service fee covers our time and expertise, and the clothes cost what the store charges.</p></details>
+      <details><summary>What happens on the discovery call?<span class="pm" aria-hidden="true"></span></summary><p class="a">It’s a private conversation about your wardrobe, your goals, and which service is the right fit. You can pick a time online from our calendar.</p></details>
+      <details><summary>How long does a Closet Audit take?<span class="pm" aria-hidden="true"></span></summary><p class="a">One to two hours. You’ll come away with a full closet review, new outfits from your existing wardrobe, a gap analysis, and recommendations for key pieces.</p></details>
+      <details><summary>What is the founding member price?<span class="pm" aria-hidden="true"></span></summary><p class="a">The Men’s Club is $500 for founding members. That price is available for a limited time.</p></details>
+      <details><summary>Where do you work?<span class="pm" aria-hidden="true"></span></summary><p class="a">In Phoenix and Scottsdale, by appointment.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact on-dark" id="contact" aria-labelledby="h-c">
+  <div class="wrap grid">
+    <div class="stack">
+      <h2 id="h-c">Your best-dressed chapter starts here.</h2>
+      <p class="lede">Reserve a private discovery call to discuss your wardrobe, your goals, and the right service for you.</p>
+      <div class="ways">
+        <a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></span><small>Book online</small><b>Choose a time on our calendar</b></a>
+        <a href="mailto:thevaletclubstyling@gmail.com"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><small>Email</small><b>thevaletclubstyling@gmail.com</b></a>
+        <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></span><small>Instagram</small><b>@valetclubstyling</b></a>
+        <a href="https://tiktok.com/@thevaletclubstyling" target="_blank" rel="noopener"><span class="dot"><svg class="ic fill" aria-hidden="true"><use href="#i-tt"/></svg></span><small>TikTok</small><b>@thevaletclubstyling</b></a>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate>
+      <h3>Request a consultation</h3>
+      <p>Tell us a little about what you need. This opens an email to us, ready to send.</p>
+      <fieldset><legend>Which service are you interested in?</legend>
+        <div class="opts" id="svc">
+          <label><input type="radio" name="svc" value="The Closet Audit"><span>The Closet Audit</span></label>
+          <label><input type="radio" name="svc" value="The Men’s Club"><span>The Men’s Club</span></label>
+          <label><input type="radio" name="svc" value="The Exclusive"><span>The Exclusive</span></label>
+          <label><input type="radio" name="svc" value="Not sure yet" checked><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>What are you dressing for?</legend>
+        <div class="opts">
+          <label><input type="checkbox" name="occ" value="Work"><span>Work</span></label>
+          <label><input type="checkbox" name="occ" value="Weekends"><span>Weekends</span></label>
+          <label><input type="checkbox" name="occ" value="An occasion"><span>An occasion</span></label>
+          <label><input type="checkbox" name="occ" value="Travel"><span>Travel</span></label>
+          <label><input type="checkbox" name="occ" value="A full refresh"><span>A full refresh</span></label>
+        </div>
+      </fieldset>
+      <div class="two">
+        <div><label for="nm">Your name</label><input id="nm" type="text" autocomplete="name"></div>
+        <div><label for="tel">Phone</label><input id="tel" type="tel" autocomplete="tel"></div>
+      </div>
+      <div><label for="msg">Anything we should know?</label><textarea id="msg" placeholder="Sizes, favorite brands, an upcoming event"></textarea></div>
+      <button class="btn" type="submit">Write the email</button>
+      <p class="fine">Prefer to write it yourself? Email thevaletclubstyling@gmail.com.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="seal" href="#top" aria-label="The Valet Club, back to top"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-club-circular-seal.png&amp;w=640&amp;q=75" alt="The Valet Club Styling seal" width="120" height="120" loading="lazy"></a>
+        <p class="line">Dress well. Live effortlessly.</p>
+        <div class="icons">
+          <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="https://tiktok.com/@thevaletclubstyling" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic fill" aria-hidden="true"><use href="#i-tt"/></svg></a>
+          <a href="mailto:thevaletclubstyling@gmail.com" aria-label="Email"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a>
+          <a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener" aria-label="Book a consultation"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Services</h4><ul><li><a href="#services">The Closet Audit</a></li><li><a href="#services">The Men’s Club</a></li><li><a href="#services">The Exclusive</a></li><li><a href="#more">Gifting, weddings and teams</a></li></ul></div>
+      <div><h4>The Valet Club</h4><ul><li><a href="#approach">Our approach</a></li><li><a href="#founders">About us</a></li><li><a href="#journal">The Journal</a></li><li><a href="#style-note">The Style Note</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a></li><li><a href="mailto:thevaletclubstyling@gmail.com">thevaletclubstyling<wbr>@gmail.com</a></li><li>Phoenix and Scottsdale, Arizona</li><li>By appointment</li></ul></div>
+    </div>
+    <div class="bot"><span>© <span id="yr">2026</span> The Valet Club. All rights reserved.</span><a href="#top"><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg>Back to top</a></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
+  <a class="btn ghost sq" href="mailto:thevaletclubstyling@gmail.com" aria-label="Email us"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a>
+</div>
+
+<script>
+(function(){
+var q=function(s,r){return (r||document).querySelector(s)}, qa=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+q('#yr').textContent=new Date().getFullYear();
+
+/* photos: mark failures, then swap in a sharper version when one is available */
+qa('.ph img').forEach(function(img){
+  var fail=function(){img.closest('.ph').classList.add('noimg')};
+  var up=function(){var hi=img.getAttribute('data-hi');if(!hi)return;var t=new Image();t.onload=function(){if(t.naturalWidth>img.naturalWidth)img.src=hi};t.src=hi};
+  img.addEventListener('error',fail);
+  if(img.complete){img.naturalWidth?up():(img.currentSrc&&fail())}else img.addEventListener('load',up,{once:true});
+});
+
+/* menu */
+var hdr=q('#hdr'),bg=q('#burger');
+function setMenu(o){hdr.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Close menu':'Open menu')}
+bg.addEventListener('click',function(){setMenu(!hdr.classList.contains('open'))});
+qa('#nav a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+/* current section in nav; mobile book bar */
+if('IntersectionObserver' in window){
+  var links=qa('#nav a[href^="#"]');
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false')})})},{rootMargin:'-45% 0px -50% 0px'});
+  ['services','approach','founders','journal','faq','contact'].forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+  var mb=q('#mbar'),past=false,atC=false,sync=function(){mb.classList.toggle('on',past&&!atC)};
+  new IntersectionObserver(function(es){past=!es[0].isIntersecting;sync()},{threshold:.1}).observe(q('.hero'));
+  new IntersectionObserver(function(es){atC=es[0].isIntersecting;sync()},{threshold:.15}).observe(q('#contact'));
+}
+
+/* looks rail */
+var rail=q('#rail'),step=function(){return Math.max(266,rail.clientWidth*.7)};
+q('#prev').addEventListener('click',function(){rail.scrollBy({left:-step(),behavior:'smooth'})});
+q('#next').addEventListener('click',function(){rail.scrollBy({left:step(),behavior:'smooth'})});
+
+/* style note signup */
+q('#noteform').addEventListener('submit',function(e){e.preventDefault();var v=q('#nemail').value.trim(),f=q('#nfine');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){f.textContent='Enter a valid email address, like you@example.com.';q('#nemail').focus();return}
+  f.textContent='This opens an email to us so we can add you.';
+  location.href='mailto:thevaletclubstyling@gmail.com?subject='+encodeURIComponent('Add me to The Style Note')+'&body='+encodeURIComponent('Please add '+v+' to The Style Note.')});
+
+/* which-service quiz */
+(function(){var qs=qa('#quiz .q'),res=q('#qres'),prog=q('#qprog'),sc,i;
+  var R={a:['The Closet Audit','$300 per session, 1–2 hours. We review your closet, build new outfits from what you own, and tell you the key pieces to add.'],
+         c:['The Men’s Club','$500 founding member price. A style consultation, then 3–5 complete looks curated for you, with a one-hour outfit review.'],
+         e:['The Exclusive','From $1,495. A Closet Audit, 5–7 complete looks, accessory and shopping curation, and a final fit session.']};
+  function show(){qs.forEach(function(x,k){x.classList.toggle('on',k===i)});res.classList.toggle('on',i>=qs.length);prog.textContent=i<qs.length?'Question '+(i+1)+' of '+qs.length:'Your match'}
+  function reset(){sc={a:0,c:0,e:0};i=0;show()}
+  qa('#quiz .q button').forEach(function(b){b.addEventListener('click',function(){var k=b.getAttribute('data-s');sc[k]+=(i===0?1.5:1);i++;
+    if(i>=qs.length){var best=['e','c','a'].sort(function(x,y){return sc[y]-sc[x]})[0];q('#qname').textContent=R[best][0];q('#qwhy').textContent=R[best][1];q('#qgo').setAttribute('data-pick',R[best][0])}
+    show()})});
+  q('#qagain').addEventListener('click',reset);
+  q('#qgo').addEventListener('click',function(){var v=this.getAttribute('data-pick');var r=qa('#svc input').filter(function(x){return x.value===v})[0];if(r)r.checked=true});
+  reset();})();
+
+/* foundation wardrobe checklist */
+(function(){var boxes=qa('#ticks input'),c=q('#tcount'),m=q('#tmsg');
+  function upd(){var n=boxes.filter(function(b){return b.checked}).length;c.textContent=n+' of '+boxes.length;
+    m.textContent=n===0?'Tick what’s already in your closet.':n<=5?'A solid start. The missing pieces are where a stylist saves you the most time.':n<=10?'Most of the foundation is there. A few well-chosen additions will tie it together.':'You have the foundation. Now it’s about fit, combinations and the finishing details.'}
+  boxes.forEach(function(b){b.addEventListener('change',upd)});})();
+
+/* service buttons preselect the form */
+qa('[data-pick]').forEach(function(a){a.addEventListener('click',function(){var r=qa('#svc input').filter(function(i){return i.value===a.getAttribute('data-pick')})[0];if(r)r.checked=true})});
+
+/* form writes an email */
+q('#form').addEventListener('submit',function(e){e.preventDefault();
+  var svc=(q('#svc input:checked')||{}).value||'Not sure yet';
+  var occ=qa('input[name=occ]:checked').map(function(i){return i.value}).join(', ')||'Not specified';
+  var nm=q('#nm').value.trim(),tel=q('#tel').value.trim(),msg=q('#msg').value.trim();
+  var body=['Service: '+svc,'Dressing for: '+occ,'Name: '+(nm||''),'Phone: '+(tel||''),'',msg].join('\n');
+  location.href='mailto:thevaletclubstyling@gmail.com?subject='+encodeURIComponent('Consultation request'+(nm?' from '+nm:''))+'&body='+encodeURIComponent(body);
+});
+})();
+</script>
+</body>
+</html>
