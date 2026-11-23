@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Valet Club | Private Menswear Styling in Phoenix &amp; Scottsdale</title>
 <meta name="description" content="Private personal styling for men. Wardrobe edits, personal shopping, and occasion dressing in Phoenix and Scottsdale. By appointment.">
+<meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Valet Club | Private Menswear Styling">
 <meta property="og:description" content="Dress well. Live effortlessly. Private styling for men in Phoenix and Scottsdale.">
@@ -92,9 +93,10 @@ i,em{font-style:italic}
 /* hero */
 .hero{background:var(--green);overflow:hidden}
 .hero .grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,80px);align-items:center;padding-block:clamp(48px,7vw,104px)}
-.hero h1{font-size:clamp(3.3rem,8.2vw,7.6rem);font-weight:300;line-height:.94;letter-spacing:-.035em}
+.hero h1{font-size:clamp(2.9rem,6.1vw,5.9rem);font-weight:400;line-height:1;letter-spacing:-.025em}
 .hero h1 span{display:block}
-.hero h1 .l2{font-style:italic;padding-left:.55em;color:var(--camel-l)}
+.hero h1 .l2{font-style:italic;padding-left:.5em;color:var(--camel-l);white-space:nowrap}
+@media (max-width:420px){.hero h1{font-size:2.6rem}.hero h1 .l2{padding-left:.25em}}
 .hero .copy{display:grid;gap:28px;justify-items:start}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .hero .where{display:flex;align-items:center;gap:10px;font-size:.98rem;color:rgba(241,238,229,.82)}
@@ -286,6 +288,25 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 @media (max-width:900px){.note-up{grid-template-columns:1fr}}
 @media (max-width:480px){.note-up .row{flex-direction:column}}
 
+
+/* holiday edit */
+.holiday{margin-top:clamp(56px,7vw,96px);background:var(--oxblood);color:var(--linen);padding:clamp(28px,4vw,56px)}
+.holiday .hd{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(24px,3vw,40px)}
+.holiday h3{font-size:clamp(1.9rem,3.2vw,2.8rem)}
+.holiday .hd p{color:rgba(241,238,229,.82);max-width:46ch}
+.hgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(241,238,229,.4)}
+.hgrid article{padding:24px 22px 4px 0;display:grid;gap:10px;align-content:start}
+.hgrid article+article{padding-left:22px;border-left:1px solid rgba(241,238,229,.2)}
+.hgrid .when{font:400 italic 1.02rem var(--f-d);color:var(--camel-l)}
+.hgrid h4{font:400 1.4rem/1.15 var(--f-d)}
+.hgrid p{font-size:.96rem;color:rgba(241,238,229,.82)}
+.hgrid .skip{font-size:.9rem;color:rgba(241,238,229,.66)}
+.holiday .cta{margin-top:clamp(24px,3vw,36px);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.holiday .cta p{color:rgba(241,238,229,.82);font-size:.98rem;max-width:44ch}
+@media (max-width:1040px){.hgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.hgrid article:nth-child(3){padding-left:0;border-left:0}.hgrid article:nth-child(n+3){border-top:1px solid rgba(241,238,229,.2);margin-top:20px}}
+@media (max-width:900px){.holiday .hd{grid-template-columns:1fr}}
+@media (max-width:600px){.hgrid{grid-template-columns:1fr}.hgrid article:nth-child(n){padding:22px 0 0;border-left:0;margin-top:0}.hgrid article+article{border-top:1px solid rgba(241,238,229,.2);margin-top:22px}}
+
 /* wardrobe (looks) */
 .looks .top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,52px)}
 .looks .top .head{margin:0}
@@ -428,6 +449,9 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"The Valet Club","description":"Private personal styling for men. Wardrobe edits, personal shopping, and occasion dressing in Phoenix and Scottsdale. By appointment.","url":"https://thevaletclubstyling.com/","email":"thevaletclubstyling@gmail.com","areaServed":[{"@type":"City","name":"Phoenix"},{"@type":"City","name":"Scottsdale"}],"founder":[{"@type":"Person","name":"Riley Richardson"},{"@type":"Person","name":"Lexi Smith"}],"sameAs":["https://instagram.com/valetclubstyling","https://tiktok.com/@thevaletclubstyling"],"makesOffer":[{"@type":"Offer","name":"The Closet Audit","price":"300","priceCurrency":"USD"},{"@type":"Offer","name":"The Men's Club","price":"500","priceCurrency":"USD"},{"@type":"Offer","name":"The Exclusive","price":"1495","priceCurrency":"USD"}]}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -776,6 +800,17 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
         </div>
       </aside>
     </div>
+
+    <div class="holiday" id="holiday">
+      <div class="hd"><h3>The holiday edit</h3><p>Four occasions between now and January, and what we’d put a client in for each. Arizona winters are mild, so think layers you can take off.</p></div>
+      <div class="hgrid">
+        <article><p class="when">Smart, one step up</p><h4>The office party</h4><p>A dark blazer over a fine knit or an open-collar shirt, tailored trousers and leather shoes. Add one festive touch, like a deep green or burgundy knit.</p><p class="skip">Skip the novelty sweater unless it’s on the invitation.</p></article>
+        <article><p class="when">Relaxed and put together</p><h4>Dinner with family</h4><p>A textured sweater or an overshirt with dark denim or chinos and clean leather sneakers or loafers. Comfortable enough for a long table.</p><p class="skip">Skip anything you’d wear to the gym.</p></article>
+        <article><p class="when">Dark and sharp</p><h4>New Year’s Eve</h4><p>A black or midnight suit with a crisp white shirt, or a velvet jacket with black trousers. Polished shoes, and a pocket square if you like one.</p><p class="skip">Skip the tie if the room is relaxed. Keep the jacket.</p></article>
+        <article><p class="when">Layers that pack flat</p><h4>Holiday travel</h4><p>An unlined blazer, a merino knit, dark trousers with stretch and loafers you can slip off at security. Everything should work with everything.</p><p class="skip">Skip packing a second pair of dress shoes.</p></article>
+      </div>
+      <div class="cta"><a class="btn camel" href="#contact" data-pick="The Men’s Club">Get holiday looks picked for me</a><p>The Men’s Club gives you 3–5 complete looks, which covers the season.</p></div>
+    </div>
     <div class="tips">
       <h3 class="col">Style notes we give every client</h3>
       <div class="tipgrid">
@@ -916,7 +951,7 @@ if('IntersectionObserver' in window){
   var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false')})})},{rootMargin:'-45% 0px -50% 0px'});
   ['services','approach','founders','journal','faq','contact'].forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
   var mb=q('#mbar'),past=false,atC=false,sync=function(){mb.classList.toggle('on',past&&!atC)};
-  new IntersectionObserver(function(es){past=!es[0].isIntersecting;sync()},{threshold:.1}).observe(q('.hero'));
+  new IntersectionObserver(function(es){past=!es[0].isIntersecting;sync();if(es[0].isIntersecting)links.forEach(function(a){a.setAttribute('aria-current','false')})},{threshold:.1}).observe(q('.hero'));
   new IntersectionObserver(function(es){atC=es[0].isIntersecting;sync()},{threshold:.15}).observe(q('#contact'));
 }
 
