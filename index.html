@@ -307,6 +307,68 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 @media (max-width:900px){.holiday .hd{grid-template-columns:1fr}}
 @media (max-width:600px){.hgrid{grid-template-columns:1fr}.hgrid article:nth-child(n){padding:22px 0 0;border-left:0;margin-top:0}.hgrid article+article{border-top:1px solid rgba(241,238,229,.2);margin-top:22px}}
 
+
+/* clubhouse */
+.club{background:var(--green);color:var(--linen);overflow:hidden}
+.club .head .lede{color:rgba(241,238,229,.8)}
+.ctabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.ctabs button{font:500 1rem var(--f-b);padding:13px 20px;border-radius:99px;border:1px solid rgba(241,238,229,.4);background:transparent;color:var(--linen);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.ctabs button:hover{border-color:var(--linen)}
+.ctabs button[aria-selected="true"]{background:var(--camel);border-color:var(--camel);color:var(--ink)}
+.cpanel{display:none;background:var(--white);color:var(--ink);padding:clamp(24px,4vw,52px);min-height:420px}
+.cpanel.on{display:block}
+.cpanel h3{font-size:clamp(1.7rem,2.8vw,2.4rem)}
+.cpanel .sub{color:var(--ink-2);margin-top:8px;max-width:60ch}
+.cbar{height:4px;background:var(--linen-2);margin:22px 0 26px;position:relative}
+.cbar i{position:absolute;left:0;top:0;bottom:0;background:var(--oxblood);transition:width .4s var(--ease)}
+.cmeta{display:flex;justify-content:space-between;gap:12px;font-size:.92rem;color:var(--ink-2)}
+.tq{font:400 clamp(1.4rem,2.4vw,2rem)/1.2 var(--f-d);margin:8px 0 20px;max-width:30ch}
+.topts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.topts button{text-align:left;font:500 1rem/1.35 var(--f-b);padding:16px 18px;border:1px solid rgba(11,22,38,.3);background:var(--linen);color:var(--ink);border-radius:2px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.topts button:hover:not(:disabled){border-color:var(--ink);background:#fff}
+.topts button:disabled{cursor:default}
+.topts button.right{background:#1f5a3c;border-color:#1f5a3c;color:#fff}
+.topts button.wrong{background:var(--oxblood);border-color:var(--oxblood);color:#fff}
+.texp{margin-top:18px;padding:16px 18px;background:var(--linen);border-left:3px solid var(--camel);display:none}
+.texp.on{display:block}
+.texp b{font-weight:600}
+.cnext{margin-top:20px;display:none}
+.cnext.on{display:inline-flex}
+.cres{display:none}
+.cres.on{display:grid;gap:14px;justify-items:start}
+.cres .big{font:400 clamp(3rem,7vw,5.4rem)/1 var(--f-d);letter-spacing:-.02em}
+.cres .rank{font:400 italic clamp(1.5rem,2.6vw,2.1rem) var(--f-d);color:var(--oxblood)}
+.cres p{color:var(--ink-2);max-width:52ch}
+.cres .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.linkbtn{background:none;border:0;padding:14px 6px;font:500 1rem var(--f-b);color:var(--ink);text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin-top:6px}
+.vs button{font:400 clamp(1.3rem,2.4vw,2rem)/1.15 var(--f-d);padding:clamp(28px,5vw,60px) 16px;border:1px solid rgba(11,22,38,.3);background:var(--linen);color:var(--ink);cursor:pointer;border-radius:2px;transition:background .25s,color .25s,transform .25s var(--ease)}
+.vs button:hover{background:var(--green);color:var(--linen);transform:translateY(-3px)}
+.vs span{align-self:center;font:400 italic 1.2rem var(--f-d);color:var(--ink-2)}
+.built{border-top:1px solid var(--ink);margin-top:6px;width:100%;max-width:560px}
+.built li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.built li .ic{color:var(--green);margin-top:.2em}
+.pick2{display:grid;gap:18px;margin-top:22px}
+.pick2 .lab{font-weight:500;font-size:.95rem;margin-bottom:9px}
+.chipset{display:flex;flex-wrap:wrap;gap:8px}
+.chipset button{font:400 .98rem var(--f-b);padding:11px 16px;border-radius:99px;border:1px solid rgba(11,22,38,.32);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chipset button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--linen)}
+.fit{margin-top:26px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
+.fit div{padding:18px 18px 4px 0}
+.fit div+div{padding-left:18px;border-left:1px solid var(--line)}
+.fit small{display:block;font:400 italic 1rem var(--f-d);color:var(--oxblood);margin-bottom:6px}
+.fit b{font:400 1.2rem/1.25 var(--f-d)}
+.fitnote{margin-top:18px;color:var(--ink-2);max-width:60ch}
+.cpw{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,4vw,56px);margin-top:24px;align-items:start}
+.cpw label{display:block;font-weight:500;font-size:.95rem;margin-bottom:8px}
+.cpw .f{margin-bottom:16px}
+.cpw input{width:100%;min-height:52px;padding:13px 15px;font:400 1rem var(--f-b);color:var(--ink);background:var(--linen);border:1px solid rgba(11,22,38,.3);border-radius:2px}
+.cpw input:focus{outline:2px solid var(--green);outline-offset:1px}
+.cpw .out{background:var(--linen);padding:clamp(20px,3vw,32px);display:grid;gap:10px}
+.cpw .out .big{font:400 clamp(2.6rem,5vw,4rem)/1 var(--f-d)}
+.cpw .out p{color:var(--ink-2)}
+@media (max-width:760px){.topts{grid-template-columns:1fr}.fit{grid-template-columns:1fr 1fr}.fit div:nth-child(3){padding-left:0;border-left:0}.fit div:nth-child(n+3){border-top:1px solid var(--line)}.cpw{grid-template-columns:1fr}.vs{grid-template-columns:1fr}.vs span{justify-self:center}.ctabs button{padding:11px 15px;font-size:.94rem}}
+
 /* wardrobe (looks) */
 .looks .top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,52px)}
 .looks .top .head{margin:0}
@@ -479,9 +541,9 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
     <nav id="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#approach">Our approach</a>
+      <a href="#clubhouse">Clubhouse</a>
       <a href="#founders">About us</a>
       <a href="#journal">Journal</a>
-      <a href="#faq">Questions</a>
       <a href="#contact">Contact</a>
       <a class="m-only" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
     </nav>
@@ -649,6 +711,82 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
   </div>
 </section>
 
+
+
+<section class="sec club" id="clubhouse" aria-labelledby="h-club">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-club">The Clubhouse</h2>
+      <p class="lede">Test what you know, find your style type, and get an outfit in ten seconds. No sign-up, no email, just play.</p>
+    </div>
+    <div class="ctabs" role="tablist" aria-label="Clubhouse games and tools">
+      <button role="tab" aria-selected="true" aria-controls="cp-trivia" id="ct-trivia" type="button">Menswear trivia</button>
+      <button role="tab" aria-selected="false" aria-controls="cp-type" id="ct-type" type="button">What’s your style type?</button>
+      <button role="tab" aria-selected="false" aria-controls="cp-fit" id="ct-fit" type="button">Outfit in 10 seconds</button>
+      <button role="tab" aria-selected="false" aria-controls="cp-cpw" id="ct-cpw" type="button">Cost per wear</button>
+    </div>
+
+    <div class="cpanel on" id="cp-trivia" role="tabpanel" aria-labelledby="ct-trivia">
+      <div id="tplay">
+        <div class="cmeta"><span id="tcountq">Question 1 of 8</span><span id="tscore">Score 0</span></div>
+        <div class="cbar"><i id="tbar" style="width:0"></i></div>
+        <p class="tq" id="tq"></p>
+        <div class="topts" id="topts"></div>
+        <div class="texp" id="texp" aria-live="polite"></div>
+        <button class="btn cnext" id="tnext" type="button">Next question</button>
+      </div>
+      <div class="cres" id="tres" aria-live="polite">
+        <p class="big" id="tfinal"></p>
+        <p class="rank" id="trank"></p>
+        <p id="tline"></p>
+        <div class="row"><button class="btn" id="tshare" type="button">Challenge a friend</button><a class="btn ghost" href="#contact">Book a consultation</a><button class="linkbtn" id="tagain" type="button">Play again</button></div>
+        <p id="tshared" style="font-size:.92rem"></p>
+      </div>
+    </div>
+
+    <div class="cpanel" id="cp-type" role="tabpanel" aria-labelledby="ct-type" hidden>
+      <div id="splay">
+        <h3>This or that?</h3>
+        <p class="sub">Six quick picks. Go with your gut.</p>
+        <div class="cmeta" style="margin-top:20px"><span id="scount">Pick 1 of 6</span></div>
+        <div class="cbar"><i id="sbar" style="width:0"></i></div>
+        <div class="vs"><button type="button" id="sa"></button><span>or</span><button type="button" id="sb"></button></div>
+      </div>
+      <div class="cres" id="sres" aria-live="polite">
+        <p style="color:var(--ink-2)">Your style type</p>
+        <p class="big" id="sname"></p>
+        <p id="sdesc"></p>
+        <p style="font-weight:500;color:var(--ink);margin-top:6px">What we’d build for you</p>
+        <ul class="built" id="sbuilt"></ul>
+        <div class="row"><a class="btn" href="#contact" id="sgo">Build my wardrobe around this</a><button class="linkbtn" id="sagain" type="button">Try again</button></div>
+      </div>
+    </div>
+
+    <div class="cpanel" id="cp-fit" role="tabpanel" aria-labelledby="ct-fit" hidden>
+      <h3>What should I wear?</h3>
+      <p class="sub">Pick where you’re going and how hot it is. Built for Arizona weather.</p>
+      <div class="pick2">
+        <div><p class="lab" id="occl">Where are you going?</p><div class="chipset" id="focc" role="group" aria-labelledby="occl"></div></div>
+        <div><p class="lab" id="tmpl">How’s the weather?</p><div class="chipset" id="ftmp" role="group" aria-labelledby="tmpl"></div></div>
+      </div>
+      <div class="fit" id="fout" aria-live="polite"></div>
+      <p class="fitnote" id="fnote"></p>
+    </div>
+
+    <div class="cpanel" id="cp-cpw" role="tabpanel" aria-labelledby="ct-cpw" hidden>
+      <h3>Is it worth the money?</h3>
+      <p class="sub">The price tag matters less than how often you wear it. Run the numbers before you buy.</p>
+      <div class="cpw">
+        <div>
+          <div class="f"><label for="cprice">Price ($)</label><input id="cprice" type="number" inputmode="decimal" min="0" value="400"></div>
+          <div class="f"><label for="cwears">Times you’ll wear it per month</label><input id="cwears" type="number" inputmode="numeric" min="0" value="6"></div>
+          <div class="f"><label for="cyears">Years you’ll keep it</label><input id="cyears" type="number" inputmode="numeric" min="0" value="3"></div>
+        </div>
+        <div class="out" aria-live="polite"><p>Cost per wear</p><p class="big" id="cout"></p><p id="cverdict"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="sec more" id="more" aria-labelledby="h-more">
   <div class="wrap">
@@ -913,7 +1051,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
         </div>
       </div>
       <div><h4>Services</h4><ul><li><a href="#services">The Closet Audit</a></li><li><a href="#services">The Men’s Club</a></li><li><a href="#services">The Exclusive</a></li><li><a href="#more">Gifting, weddings and teams</a></li></ul></div>
-      <div><h4>The Valet Club</h4><ul><li><a href="#approach">Our approach</a></li><li><a href="#founders">About us</a></li><li><a href="#journal">The Journal</a></li><li><a href="#style-note">The Style Note</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>The Valet Club</h4><ul><li><a href="#approach">Our approach</a></li><li><a href="#clubhouse">The Clubhouse</a></li><li><a href="#founders">About us</a></li><li><a href="#journal">The Journal</a></li><li><a href="#style-note">The Style Note</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul></div>
       <div><h4>Get in touch</h4><ul><li><a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a></li><li><a href="mailto:thevaletclubstyling@gmail.com">thevaletclubstyling<wbr>@gmail.com</a></li><li>Phoenix and Scottsdale, Arizona</li><li>By appointment</li></ul></div>
     </div>
     <div class="bot"><span>© <span id="yr">2026</span> The Valet Club. All rights reserved.</span><a href="#top"><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg>Back to top</a></div>
@@ -949,7 +1087,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(fals
 if('IntersectionObserver' in window){
   var links=qa('#nav a[href^="#"]');
   var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false')})})},{rootMargin:'-45% 0px -50% 0px'});
-  ['services','approach','founders','journal','faq','contact'].forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+  ['services','approach','clubhouse','founders','journal','contact'].forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
   var mb=q('#mbar'),past=false,atC=false,sync=function(){mb.classList.toggle('on',past&&!atC)};
   new IntersectionObserver(function(es){past=!es[0].isIntersecting;sync();if(es[0].isIntersecting)links.forEach(function(a){a.setAttribute('aria-current','false')})},{threshold:.1}).observe(q('.hero'));
   new IntersectionObserver(function(es){atC=es[0].isIntersecting;sync()},{threshold:.15}).observe(q('#contact'));
@@ -985,6 +1123,61 @@ q('#noteform').addEventListener('submit',function(e){e.preventDefault();var v=q(
   function upd(){var n=boxes.filter(function(b){return b.checked}).length;c.textContent=n+' of '+boxes.length;
     m.textContent=n===0?'Tick what’s already in your closet.':n<=5?'A solid start. The missing pieces are where a stylist saves you the most time.':n<=10?'Most of the foundation is there. A few well-chosen additions will tie it together.':'You have the foundation. Now it’s about fit, combinations and the finishing details.'}
   boxes.forEach(function(b){b.addEventListener('change',upd)});})();
+
+/* clubhouse */
+(function(){
+  var tabs=qa('.ctabs [role=tab]'),panels=qa('.cpanel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});panels.forEach(function(p){var on=p.id===t.getAttribute('aria-controls');p.classList.toggle('on',on);p.hidden=!on})})});
+  function el(tag,txt,cls){var e=document.createElement(tag);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+
+  /* trivia */
+  var T=[["On a two-button suit jacket, which button do you fasten?", ["Top only", "Bottom only", "Both", "Neither"], 0, "Top only. The bottom button is always left undone, and you unbutton the jacket when you sit."], ["What makes a shoe an Oxford and not a Derby?", ["Closed lacing", "A rubber sole", "A pointed toe", "Suede leather"], 0, "Closed lacing. On an Oxford the eyelet tabs are sewn under the front of the shoe, which gives it a sleeker, dressier look."], ["Where should the tip of your tie end?", ["At your belt buckle", "Mid-chest", "Two inches below the belt", "At your sternum"], 0, "Right at the belt buckle or waistband. Shorter looks dated, longer looks sloppy."], ["What is the ‘break’ in a pair of trousers?", ["The fold where the hem meets the shoe", "The crease down the front", "The rise of the waist", "The pocket opening"], 0, "The fold where the trouser hem rests on the shoe. Most men look sharpest with a slight break or none."], ["The word ‘seersucker’ comes from a Persian phrase meaning what?", ["Milk and sugar", "Summer cloth", "River stripe", "Light wind"], 0, "Milk and sugar, for its mix of smooth and puckered stripes. It is one of the best fabrics for Arizona heat."], ["How much shirt cuff should show past your jacket sleeve?", ["About a quarter to half an inch", "None", "Two inches", "The whole cuff"], 0, "About a quarter to half an inch. It is the fastest way to tell if a jacket fits."], ["What defines a Chelsea boot?", ["Elastic side panels", "A steel toe", "Laces to the ankle", "A buckle strap"], 0, "Elastic side panels and no laces. It works with denim and with tailoring."], ["‘Sprezzatura’ is the Italian idea of what?", ["Looking effortless on purpose", "Wearing only black", "Matching every accessory", "Dressing for the season"], 0, "Studied carelessness: making style look effortless. It is also our whole philosophy."]],ti,ts;
+  function tshow(){var qd=T[ti];q('#tcountq').textContent='Question '+(ti+1)+' of '+T.length;q('#tscore').textContent='Score '+ts;q('#tbar').style.width=(ti/T.length*100)+'%';q('#tq').textContent=qd[0];
+    var box=q('#topts');box.innerHTML='';q('#texp').classList.remove('on');q('#tnext').classList.remove('on');
+    shuffle(qd[1].map(function(o,k){return [o,k]})).forEach(function(o){var b=el('button',o[0]);b.type='button';b.addEventListener('click',function(){
+      var ok=o[1]===qd[2];if(ok)ts++;qa('button',box).forEach(function(x){x.disabled=true;if(x.textContent===qd[1][qd[2]])x.classList.add('right')});if(!ok)b.classList.add('wrong');
+      var ex=q('#texp');ex.innerHTML='';ex.appendChild(el('b',ok?'Correct. ':'Not quite. '));ex.appendChild(document.createTextNode(qd[3]));ex.classList.add('on');
+      q('#tscore').textContent='Score '+ts;var n=q('#tnext');n.textContent=ti===T.length-1?'See my score':'Next question';n.classList.add('on');n.focus()});box.appendChild(b)})}
+  function tend(){q('#tplay').style.display='none';q('#tres').classList.add('on');q('#tfinal').textContent=ts+' out of '+T.length;
+    var r=ts===T.length?['Best dressed in the room','A perfect score. You could do our job.']:ts>=6?['Sharp','You know your stuff. A stylist would just be fine-tuning.']:ts>=3?['Getting there','A solid base. A session with us would fill in the gaps fast.']:['Rookie','Everyone starts somewhere. That’s exactly what we’re here for.'];
+    q('#trank').textContent=r[0];q('#tline').textContent=r[1];q('#tshared').textContent=''}
+  function tstart(){ti=0;ts=0;q('#tplay').style.display='';q('#tres').classList.remove('on');tshow()}
+  q('#tnext').addEventListener('click',function(){ti++;if(ti>=T.length)tend();else tshow()});
+  q('#tagain').addEventListener('click',tstart);
+  q('#tshare').addEventListener('click',function(){var url=location.href.split('#')[0]+'#clubhouse',txt='I scored '+ts+' out of '+T.length+' on The Valet Club menswear trivia. Think you can beat me?';
+    if(navigator.share){navigator.share({title:'The Valet Club menswear trivia',text:txt,url:url}).catch(function(){})}
+    else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt+' '+url).then(function(){q('#tshared').textContent='Copied. Paste it in a text to a friend.'},function(){q('#tshared').textContent=txt+' '+url})}
+    else q('#tshared').textContent=txt+' '+url});
+  tstart();
+
+  /* style type */
+  var P=[["A navy blazer", "C", "A bomber jacket", "R"], ["All neutrals", "M", "One loud piece", "B"], ["Leather loafers", "C", "Clean white sneakers", "M"], ["A patterned shirt", "B", "A plain tee", "R"], ["Tailored trousers", "C", "Broken-in denim", "R"], ["A stack of bracelets", "B", "Nothing on the wrist", "M"]],Y={"C": ["The Classic", "You like clothes that have always worked and always will. Tailoring, leather shoes and a navy blazer are your home ground.", ["Suits and jackets cut to fit you properly", "A rotation of oxford shirts and fine knits", "Loafers and dress shoes that last a decade"]], "M": ["The Minimalist", "Fewer pieces, better pieces. You want a closet where everything matches and nothing shouts.", ["A tight palette of navy, grey, white and black", "Clean sneakers and unlined jackets", "Quality basics you can wear on repeat"]], "R": ["The Easygoing", "Comfort first, and you still want to look like you tried. Denim, bombers and tees are your uniform.", ["Elevated casual: better denim, better tees", "Jackets that dress up a relaxed outfit", "Sneakers and boots that work for dinner too"]], "B": ["The Statement", "You’re happy to be noticed. Pattern, colour and accessories don’t scare you.", ["One standout piece per outfit, balanced by quiet ones", "Patterned shirts and textured jackets", "Accessories that finish a look without crowding it"]]},si,sc,first;
+  function sshow(){q('#scount').textContent='Pick '+(si+1)+' of '+P.length;q('#sbar').style.width=(si/P.length*100)+'%';q('#sa').textContent=P[si][0];q('#sb').textContent=P[si][2]}
+  function spick(k){sc[k]=(sc[k]||0)+1;if(!first)first=k;si++;if(si<P.length){sshow();return}
+    var best=Object.keys(sc).sort(function(a,b){return sc[b]-sc[a]||(a===first?-1:b===first?1:0)})[0],y=Y[best];
+    q('#splay').style.display='none';q('#sres').classList.add('on');q('#sname').textContent=y[0];q('#sdesc').textContent=y[1];
+    var ul=q('#sbuilt');ul.innerHTML='';y[2].forEach(function(t){var li=el('li');li.innerHTML='<svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>';li.appendChild(el('span',t));ul.appendChild(li)});
+    q('#sgo').setAttribute('data-type',y[0])}
+  function sstart(){si=0;sc={};first=null;q('#splay').style.display='';q('#sres').classList.remove('on');sshow()}
+  q('#sa').addEventListener('click',function(){spick(P[si][1])});q('#sb').addEventListener('click',function(){spick(P[si][3])});
+  q('#sagain').addEventListener('click',sstart);
+  q('#sgo').addEventListener('click',function(){var m=q('#msg');if(m&&!m.value)m.value='My style type came out as '+this.getAttribute('data-type')+'.'});
+  sstart();
+
+  /* outfit picker */
+  var O=["The office", "Date night", "A wedding", "The weekend", "Client dinner", "Travel day"],W=["Hot (90°F+)", "Warm (70s–80s)", "Cool evening"],F={"The office": [["Linen-blend shirt", "Lightweight chinos", "Loafers, no-show socks", "Sleeves rolled, watch on leather"], ["Oxford shirt, unlined blazer", "Tailored trousers", "Leather loafers or derbies", "Belt that matches the shoes"], ["Fine merino knit under a blazer", "Wool trousers", "Leather derbies", "A pocket square"]], "Date night": [["Camp-collar or linen shirt", "Slim dark chinos", "Suede loafers", "Open collar, good watch"], ["Dark polo or knit tee, light jacket", "Dark denim", "Clean leather sneakers or loafers", "One accessory, not three"], ["Fine-gauge crew neck, suede jacket", "Dark denim or wool trousers", "Chelsea boots", "A scent, applied lightly"]], "A wedding": [["Tan or light-blue suit in linen or tropical wool", "Matching trousers", "Brown loafers", "White shirt, tie optional"], ["Navy or mid-grey suit", "Matching trousers", "Brown or oxblood dress shoes", "Tie and pocket square"], ["Navy or charcoal suit", "Matching trousers", "Dark oxfords", "Tie, and bring a fine knit for after dark"]], "The weekend": [["Quality polo or heavyweight tee", "Tailored shorts or light chinos", "White sneakers", "Sunglasses, no socks showing"], ["Tee under an overshirt", "Dark denim or chinos", "White sneakers", "A cap or sunglasses"], ["Crew-neck sweater or overshirt", "Dark denim", "Suede boots or sneakers", "A light jacket for later"]], "Client dinner": [["Crisp shirt, unlined blazer", "Lightweight wool trousers", "Leather loafers", "No tie, top button open"], ["Blazer over a fine knit or shirt", "Tailored trousers", "Derbies or loafers", "Pocket square"], ["Dark blazer, roll-neck or shirt", "Wool trousers", "Chelsea boots or oxfords", "A good watch"]], "Travel day": [["Breathable polo", "Chinos with stretch", "Slip-on sneakers or loafers", "Unlined blazer to carry on"], ["Merino tee or polo, unlined blazer", "Dark trousers with stretch", "Loafers", "Everything works with everything"], ["Merino knit, unlined blazer", "Dark trousers with stretch", "Chelsea boots", "A scarf in the bag"]]},N=["In this heat, cloth matters more than anything. Stick to linen, cotton and lightweight wool.", "The easy season. This is when a layer you can take off earns its place.", "Desert evenings drop fast. One warm layer over what you wore all day is usually enough."],oi=0,wi=1,labs=['Top','Bottom','Shoes','Finish'];
+  function chips(box,arr,get,set){arr.forEach(function(t,k){var b=el('button',t);b.type='button';b.setAttribute('aria-pressed',k===get()?'true':'false');b.addEventListener('click',function(){set(k);qa('button',box).forEach(function(x,j){x.setAttribute('aria-pressed',j===k?'true':'false')});fshow()});box.appendChild(b)})}
+  function fshow(){var o=F[O[oi]][wi],out=q('#fout');out.innerHTML='';o.forEach(function(t,k){var d=el('div');d.appendChild(el('small',labs[k]));d.appendChild(el('b',t));out.appendChild(d)});q('#fnote').textContent=N[wi]}
+  chips(q('#focc'),O,function(){return oi},function(k){oi=k});chips(q('#ftmp'),W,function(){return wi},function(k){wi=k});fshow();
+
+  /* cost per wear */
+  function cpw(){var p=parseFloat(q('#cprice').value),w=parseFloat(q('#cwears').value),y=parseFloat(q('#cyears').value),o=q('#cout'),v=q('#cverdict');
+    if(!(p>0)||!(w>0)||!(y>0)){o.textContent='$0.00';v.textContent='Enter a price, how often you’ll wear it, and how long you’ll keep it.';return}
+    var n=w*12*y,c=p/n;o.textContent='$'+(c<10?c.toFixed(2):Math.round(c).toLocaleString());
+    v.textContent=(c<=2?'Great value. ':c<=8?'Fair value. ':'Pricey per wear. ')+'That’s '+Math.round(n).toLocaleString()+' wears. '+(c<=2?'Pieces you wear this often are where to spend.':c<=8?'Worth it if it fits well and you like wearing it.':'Wear it more often, or put the money into something you’ll reach for weekly.')}
+  ['#cprice','#cwears','#cyears'].forEach(function(id){q(id).addEventListener('input',cpw)});cpw();
+})();
 
 /* service buttons preselect the form */
 qa('[data-pick]').forEach(function(a){a.addEventListener('click',function(){var r=qa('#svc input').filter(function(i){return i.value===a.getAttribute('data-pick')})[0];if(r)r.checked=true})});
