@@ -18,13 +18,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Manrope:wght@400;500;600&display=swap">
 <style>
-/* The Valet Club. Brand navy and cream from the original site, with wardrobe accents:
-   oxblood, oxford-shirt blue, camel. The signature element is the garment hang tag
+/* The Valet Club. Brand navy and cream from the original site, with wardrobe accents: shades of navy, oxford-shirt blue, camel. The signature element is the garment hang tag
    (the brand's own mark is a valet tag): services are written on tags. */
 :root{
   --linen:#F1EEE5; --linen-2:#E6E1D4; --white:#FBFAF6;
   --ink:#0B1626; --ink-2:#5A554D; --line:rgba(11,22,38,.16);
-  --green:#061A33; --green-2:#041226; --oxblood:#641E2B; --blue:#C7D7E6; --blue-d:#2B4A6B; --camel:#C39A6B; --camel-l:#E6D3B8;
+  --green:#061A33; --green-2:#041226; --navy-2:#16365F; --blue:#C7D7E6; --blue-d:#2B4A6B; --camel:#C39A6B; --camel-l:#E6D3B8;
   --f-d:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
   --f-b:"Manrope","Helvetica Neue",Arial,sans-serif;
   --ease:cubic-bezier(.22,.7,.2,1);
@@ -51,7 +50,7 @@ i,em{font-style:italic}
 .skip{position:absolute;left:-999px;top:0}.skip:focus{left:16px;top:16px;z-index:99;background:var(--white);padding:10px 14px}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;font:500 1rem var(--f-b);text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--linen);border-radius:2px;cursor:pointer;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
-.btn:hover{background:var(--oxblood);border-color:var(--oxblood);color:var(--linen)}
+.btn:hover{background:var(--navy-2);border-color:var(--navy-2);color:var(--linen)}
 .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
 .btn.ghost:hover{background:var(--ink);color:var(--linen);border-color:var(--ink)}
 .btn.camel{background:var(--camel);border-color:var(--camel);color:var(--ink)}
@@ -71,7 +70,7 @@ i,em{font-style:italic}
 .note span>span{padding:0}.note>.wrap>span{padding-block:9px}.note .sm{display:none}
 @media (max-width:600px){.note .lg{display:none}.note .sm{display:inline}.note .wrap{gap:0 10px;flex-wrap:nowrap;font-size:.84rem}.note a{white-space:nowrap}}
 .hdr{position:sticky;top:0;z-index:50;background:rgba(241,238,229,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
-.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:74px}
+.hdr .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:74px}
 .logo{display:inline-flex;align-items:center;min-height:44px;gap:8px;text-decoration:none;font:400 1.5rem/1 var(--f-d);letter-spacing:-.02em;white-space:nowrap}
 .logo img{display:block;width:auto}
 .logo .lt{height:40px}
@@ -130,7 +129,7 @@ i,em{font-style:italic}
 @media (max-width:900px){
   .hero .grid{grid-template-columns:1fr}
   .hero .shot{justify-self:center;max-width:440px;width:calc(100% - 28px);margin-right:14px}
-  .hangtag{left:-26px;top:8px;width:94px;padding:28px 7px 10px;clip-path:polygon(16px 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%,0 16px)}.hangtag::before{top:9px}.hangtag img{width:40px;height:40px}.hangtag span{font-size:.8rem;line-height:1.25;margin-top:6px;padding-top:6px}
+  .hangtag{left:-26px;top:8px;width:94px;padding:28px 7px 10px;clip-path:polygon(16px 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%,0 16px)}.hangtag::before{top:9px}.hangtag img{width:40px;height:40px}.hangtag span{font-size:.82rem;line-height:1.25;margin-top:6px;padding-top:6px}
   .promise ul{grid-template-columns:1fr}
   .promise li{padding:20px 0}.promise li+li{padding-left:0;border-left:0;border-top:1px solid rgba(241,238,229,.18)}
 }
@@ -144,9 +143,9 @@ i,em{font-style:italic}
 .offer b{font:400 1.25rem var(--f-d)}
 .offer span{color:var(--ink-2);font-size:.98rem}
 .pair{position:relative;aspect-ratio:1/1.12}
-.pair .a{position:absolute;inset:0 20% 14% 0;--tone:var(--oxblood)}
+.pair .a{position:absolute;inset:0 20% 14% 0;--tone:var(--navy-2)}
 .pair .b{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;border:10px solid var(--linen);--tone:var(--blue-d)}
-.signoff{font:400 italic 1.5rem var(--f-d);color:var(--oxblood)}
+.signoff{font:400 italic 1.5rem var(--f-d);color:var(--navy-2)}
 @media (max-width:900px){.intro .grid{grid-template-columns:1fr}.pair{max-width:520px}.offer li{grid-template-columns:1fr}}
 
 /* services: hang tags */
@@ -159,7 +158,7 @@ i,em{font-style:italic}
 .tag::before{content:"";position:absolute;left:50%;top:20px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 3px var(--white),0 0 0 4px var(--line);z-index:1}
 .tag .top{padding:62px clamp(22px,2.4vw,34px) 26px;display:grid;gap:14px;align-content:start;flex:1}
 .tag .meta{font-size:.9rem;color:var(--ink-2);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.tag .meta .lim{color:var(--oxblood);font-weight:500}
+.tag .meta .lim{color:var(--navy-2);font-weight:500}
 .tag h3{font-size:clamp(1.9rem,2.6vw,2.4rem)}
 .tag p{color:var(--ink-2);font-size:.99rem}
 .tag ul{border-top:1px solid var(--ink);margin-top:6px}
@@ -226,7 +225,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .news p{color:var(--ink-2);max-width:60ch}
 .news .take{color:var(--ink);font:400 italic 1.08rem/1.45 var(--f-d)}
 .news .src{font-size:.9rem;color:var(--ink-2)}
-.news .src a{color:var(--oxblood);display:inline-block;padding-block:8px}
+.news .src a{color:var(--navy-2);display:inline-block;padding-block:8px}
 .jside{display:grid;gap:22px;position:sticky;top:104px}
 .card{padding:clamp(22px,2.6vw,32px);display:grid;gap:14px}
 .card.desert{background:var(--camel-l)}
@@ -235,7 +234,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .card p{font-size:.98rem;color:#4d4539}
 .card.desert li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid rgba(11,22,38,.18);font-size:.97rem}
 .card.desert li b{font:400 1.08rem var(--f-d)}
-.card.desert li .ic{margin-top:.25em;color:var(--oxblood)}
+.card.desert li .ic{margin-top:.25em;color:var(--navy-2)}
 .ticks{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px}
 .ticks label{display:flex;gap:10px;align-items:center;min-height:44px;padding:6px 0;font-size:.95rem;cursor:pointer;line-height:1.35}
 .ticks input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin:0;border:1px solid var(--ink);border-radius:2px;background:var(--white);cursor:pointer;display:grid;place-items:center}
@@ -256,10 +255,10 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 @media (max-width:600px){.tipgrid{grid-template-columns:1fr}.tipgrid article:nth-child(n){padding:22px 0;border-left:0}.ticks{grid-template-columns:1fr}}
 
 /* process */
-.process{background:var(--oxblood)}
+.process{background:var(--navy-2)}
 .process .grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(36px,6vw,100px);align-items:start}
 .process .side{position:sticky;top:112px;display:grid;gap:26px}
-.process .side .ph{aspect-ratio:4/5;--tone:#4a1620}
+.process .side .ph{aspect-ratio:4/5;--tone:#0f2a4a}
 .steps li{display:grid;grid-template-columns:clamp(64px,8vw,116px) minmax(0,1fr);gap:8px 20px;padding:clamp(28px,3.6vw,46px) 0;border-top:1px solid rgba(241,238,229,.28)}
 .steps li:last-child{border-bottom:1px solid rgba(241,238,229,.28)}
 .steps .n{font:300 italic clamp(3rem,6vw,5rem)/.9 var(--f-d);color:var(--camel-l)}
@@ -276,7 +275,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .more article+article{padding-left:30px;border-left:1px solid var(--line)}
 .more h3{font-size:clamp(1.5rem,2.2vw,1.9rem)}
 .more p{color:var(--ink-2);font-size:.99rem}
-.more .k{font:400 italic 1.05rem var(--f-d);color:var(--oxblood)}
+.more .k{font:400 italic 1.05rem var(--f-d);color:var(--navy-2)}
 .more a.lnk{font-weight:500;margin-top:0;display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:900px){.more .trio{grid-template-columns:1fr}.more article,.more article+article{padding:26px 0;border-left:0}.more article+article{border-top:1px solid var(--line)}}
 /* style note signup */
@@ -295,7 +294,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 
 
 /* holiday edit */
-.holiday{margin-top:clamp(56px,7vw,96px);background:var(--oxblood);color:var(--linen);padding:clamp(28px,4vw,56px)}
+.holiday{margin-top:clamp(56px,7vw,96px);background:var(--navy-2);color:var(--linen);padding:clamp(28px,4vw,56px)}
 .holiday .hd{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(24px,3vw,40px)}
 .holiday h3{font-size:clamp(1.9rem,3.2vw,2.8rem)}
 .holiday .hd p{color:rgba(241,238,229,.82);max-width:46ch}
@@ -325,15 +324,15 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .cpanel h3{font-size:clamp(1.7rem,2.8vw,2.4rem)}
 .cpanel .sub{color:var(--ink-2);margin-top:8px;max-width:60ch}
 .cbar{height:4px;background:var(--linen-2);margin:22px 0 26px;position:relative}
-.cbar i{position:absolute;left:0;top:0;bottom:0;background:var(--oxblood);transition:width .4s var(--ease)}
+.cbar i{position:absolute;left:0;top:0;bottom:0;background:var(--navy-2);transition:width .4s var(--ease)}
 .cmeta{display:flex;justify-content:space-between;gap:12px;font-size:.92rem;color:var(--ink-2)}
 .tq{font:400 clamp(1.4rem,2.4vw,2rem)/1.2 var(--f-d);margin:8px 0 20px;max-width:30ch}
 .topts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .topts button{text-align:left;font:500 1rem/1.35 var(--f-b);padding:16px 18px;border:1px solid rgba(11,22,38,.3);background:var(--linen);color:var(--ink);border-radius:2px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
 .topts button:hover:not(:disabled){border-color:var(--ink);background:#fff}
 .topts button:disabled{cursor:default}
-.topts button.right{background:#1f5a3c;border-color:#1f5a3c;color:#fff}
-.topts button.wrong{background:var(--oxblood);border-color:var(--oxblood);color:#fff}
+.topts button.right{background:var(--green);border-color:var(--green);color:#fff}.topts button.right::after{content:" ✓"}
+.topts button.wrong{background:#5b6472;border-color:#5b6472;color:#fff;text-decoration:line-through}
 .texp{margin-top:18px;padding:16px 18px;background:var(--linen);border-left:3px solid var(--camel);display:none}
 .texp.on{display:block}
 .texp b{font-weight:600}
@@ -342,7 +341,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .cres{display:none}
 .cres.on{display:grid;gap:14px;justify-items:start}
 .cres .big{font:400 clamp(3rem,7vw,5.4rem)/1 var(--f-d);letter-spacing:-.02em}
-.cres .rank{font:400 italic clamp(1.5rem,2.6vw,2.1rem) var(--f-d);color:var(--oxblood)}
+.cres .rank{font:400 italic clamp(1.5rem,2.6vw,2.1rem) var(--f-d);color:var(--navy-2)}
 .cres p{color:var(--ink-2);max-width:52ch}
 .cres .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;align-items:center}
 .linkbtn{background:none;border:0;min-height:44px;padding:10px 6px;font:500 1rem var(--f-b);color:var(--ink);text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
@@ -361,7 +360,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .fit{margin-top:26px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
 .fit div{padding:18px 18px 4px 0}
 .fit div+div{padding-left:18px;border-left:1px solid var(--line)}
-.fit small{display:block;font:400 italic 1rem var(--f-d);color:var(--oxblood);margin-bottom:6px}
+.fit small{display:block;font:400 italic 1rem var(--f-d);color:var(--navy-2);margin-bottom:6px}
 .fit b{font:400 1.2rem/1.25 var(--f-d)}
 .fitnote{margin-top:18px;color:var(--ink-2);max-width:60ch}
 .cpw{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,4vw,56px);margin-top:24px;align-items:start}
@@ -373,6 +372,33 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .cpw .out .big{font:400 clamp(2.6rem,5vw,4rem)/1 var(--f-d)}
 .cpw .out p{color:var(--ink-2)}
 @media (max-width:760px){.topts{grid-template-columns:1fr}.fit{grid-template-columns:1fr 1fr}.fit div:nth-child(3){padding-left:0;border-left:0}.fit div:nth-child(n+3){border-top:1px solid var(--line)}.cpw{grid-template-columns:1fr}.vs{grid-template-columns:1fr}.vs span{justify-self:center}.ctabs button{padding:11px 15px;font-size:.94rem}}
+
+
+/* scroll progress */
+.hdr .prog{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--camel);pointer-events:none}
+.hdr{position:sticky}
+/* jacket size + packing */
+.sz{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,4vw,56px);margin-top:24px;align-items:start}
+.sz label{display:block;font-weight:500;font-size:.95rem;margin-bottom:8px}
+.sz .f{margin-bottom:16px}
+.sz .hw{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sz input,.sz select{width:100%;min-height:52px;padding:13px 15px;font:400 1rem var(--f-b);color:var(--ink);background:var(--linen);border:1px solid rgba(11,22,38,.3);border-radius:2px}
+.sz input:focus,.sz select:focus{outline:2px solid var(--green);outline-offset:1px}
+.sz .how{font-size:.92rem;color:var(--ink-2)}
+.sz .out{background:var(--green);color:var(--linen);padding:clamp(20px,3vw,32px);display:grid;gap:10px}
+.sz .out .big{font:400 clamp(3rem,6vw,4.6rem)/1 var(--f-d)}
+.sz .out p{color:rgba(241,238,229,.82)}
+.pk{margin-top:22px;display:grid;gap:18px}
+.pk .nrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.pk .step{width:48px;height:48px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);font-size:1.3rem;cursor:pointer}
+.pk .step:hover{background:var(--ink);color:var(--linen)}
+.pk .nval{font:400 2rem/1 var(--f-d);min-width:5.5ch;text-align:center}
+.pklist{columns:2;column-gap:32px;border-top:1px solid var(--ink);padding-top:14px;margin-top:6px}
+.pklist li{break-inside:avoid;display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.pklist li b{font:400 1.15rem var(--f-d);min-width:2.2ch}
+.pktip{color:var(--ink-2);max-width:60ch}
+.best{font-size:.92rem;color:var(--ink-2)}
+@media (max-width:760px){.sz{grid-template-columns:1fr}.pklist{columns:1}}
 
 /* wardrobe (looks) */
 .looks .top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(30px,4vw,52px)}
@@ -419,9 +445,9 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .people div+div{padding-left:20px;border-left:1px solid var(--line)}
 .people b{display:block;font:400 clamp(1.5rem,2.2vw,2rem)/1.1 var(--f-d);letter-spacing:-.02em}
 .people span{display:block;color:var(--ink-2);font-size:.95rem;margin-top:6px}
-.people i{display:block;font:400 italic 1.05rem var(--f-d);color:var(--oxblood);margin-top:10px}
+.people i{display:block;font:400 italic 1.05rem var(--f-d);color:var(--navy-2);margin-top:10px}
 .fgrid .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-height:240px}
-.fgrid .duo .ph:first-child{--tone:var(--blue-d)}.fgrid .duo .ph:last-child{--tone:var(--oxblood)}
+.fgrid .duo .ph:first-child{--tone:var(--blue-d)}.fgrid .duo .ph:last-child{--tone:var(--navy-2)}
 @media (max-width:900px){.founders .top,.fgrid{grid-template-columns:1fr}.fgrid .main{min-height:0;aspect-ratio:auto;height:min(120vw,640px)}.fgrid .main img{object-position:50% 25%}.fgrid .duo{min-height:0}.fgrid .duo .ph{aspect-ratio:3/4}}
 
 /* follow */
@@ -437,7 +463,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .strip .ph{aspect-ratio:1}
 .strip a::after{content:"";position:absolute;inset:0;background:rgba(6,26,51,0);transition:background .35s}
 .strip a:hover::after{background:rgba(6,26,51,.38)}
-.strip a:nth-child(1) .ph{--tone:var(--green)}.strip a:nth-child(2) .ph{--tone:var(--oxblood)}.strip a:nth-child(3) .ph{--tone:var(--blue-d)}.strip a:nth-child(4) .ph{--tone:#8a6a44}.strip a:nth-child(5) .ph{--tone:var(--green-2)}
+.strip a:nth-child(1) .ph{--tone:var(--green)}.strip a:nth-child(2) .ph{--tone:var(--navy-2)}.strip a:nth-child(3) .ph{--tone:var(--blue-d)}.strip a:nth-child(4) .ph{--tone:#8a6a44}.strip a:nth-child(5) .ph{--tone:var(--green-2)}
 @media (max-width:760px){.strip{grid-template-columns:repeat(3,minmax(0,1fr))}.strip a:nth-child(n+4){display:none}.social a span{display:none}.social a{padding:0;width:48px;justify-content:center}}
 
 /* faq */
@@ -520,7 +546,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"The Valet Club","description":"Private personal styling for men. Wardrobe edits, personal shopping, and occasion dressing in Phoenix and Scottsdale. By appointment.","url":"https://thevaletclubstyling.com/","email":"thevaletclubstyling@gmail.com","areaServed":[{"@type":"City","name":"Phoenix"},{"@type":"City","name":"Scottsdale"}],"founder":[{"@type":"Person","name":"Riley Richardson"},{"@type":"Person","name":"Lexi Smith"}],"sameAs":["https://instagram.com/valetclubstyling","https://tiktok.com/@thevaletclubstyling"],"makesOffer":[{"@type":"Offer","name":"The Closet Audit","price":"300","priceCurrency":"USD"},{"@type":"Offer","name":"The Men's Club","price":"500","priceCurrency":"USD"},{"@type":"Offer","name":"The Exclusive","price":"1495","priceCurrency":"USD"}]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"The Valet Club","description":"Private personal styling for men. Wardrobe edits, personal shopping, and occasion dressing in Phoenix and Scottsdale. By appointment.","url":"https://thevaletclubstyling.com/","email":"hello@thevaletclubstyling.com","areaServed":[{"@type":"City","name":"Phoenix"},{"@type":"City","name":"Scottsdale"}],"founder":[{"@type":"Person","name":"Riley Richardson"},{"@type":"Person","name":"Lexi Smith"}],"sameAs":["https://instagram.com/valetclubstyling","https://tiktok.com/@thevaletclubstyling"],"makesOffer":[{"@type":"Offer","name":"The Closet Audit","price":"300","priceCurrency":"USD"},{"@type":"Offer","name":"The Men's Club","price":"500","priceCurrency":"USD"},{"@type":"Offer","name":"The Exclusive","price":"1495","priceCurrency":"USD"}]}
 </script>
 </head>
 <body>
@@ -535,6 +561,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
   <symbol id="i-hanger" viewBox="0 0 24 24"><path d="M12 8.500V7.800a2.300 2.300 0 1 0-2.300-2.300M12 8.500 2.800 15.200c-.9.700-.4 2.300.8 2.300h16.800c1.200 0 1.700-1.600.8-2.300L12 8.500z"/></symbol>
   <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.500 4.500v6.300c0 .5.2 1 .6 1.400l7.700 7.700a2 2 0 0 0 2.800 0l5.300-5.300a2 2 0 0 0 0-2.800l-7.700-7.700a2 2 0 0 0-1.400-.6H4.500a1 1 0 0 0-1 1z"/><circle cx="8" cy="8" r="1.300"/></symbol>
   <symbol id="i-hand" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><path d="M8.500 13.500s1.300 2 3.500 2 3.500-2 3.500-2M9 9.500h.01M15 9.500h.01"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.500" r="3.700"/><path d="M4.500 20c.600-3.800 3.600-6 7.500-6s6.900 2.200 7.500 6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.500-5.600-6.500-10.500a6.500 6.500 0 0 1 13 0C18.500 15.400 12 21 12 21z"/><circle cx="12" cy="10.300" r="2.300"/></symbol>
   <symbol id="i-left" viewBox="0 0 24 24"><path d="M14.500 5.500 8 12l6.500 6.500"/></symbol>
   <symbol id="i-right" viewBox="0 0 24 24"><path d="M9.500 5.500 16 12l-6.500 6.500"/></symbol>
@@ -556,6 +583,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <a class="m-only" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
     </nav>
     <a class="btn book" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
+    <i class="prog" id="prog" aria-hidden="true"></i>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -731,12 +759,15 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <button role="tab" aria-selected="true" aria-controls="cp-trivia" id="ct-trivia" type="button">Menswear trivia</button>
       <button role="tab" aria-selected="false" aria-controls="cp-type" id="ct-type" type="button">What’s your style type?</button>
       <button role="tab" aria-selected="false" aria-controls="cp-fit" id="ct-fit" type="button">Outfit in 10 seconds</button>
+      <button role="tab" aria-selected="false" aria-controls="cp-size" id="ct-size" type="button">Find my jacket size</button>
+      <button role="tab" aria-selected="false" aria-controls="cp-pack" id="ct-pack" type="button">Pack for a trip</button>
       <button role="tab" aria-selected="false" aria-controls="cp-cpw" id="ct-cpw" type="button">Cost per wear</button>
     </div>
 
     <div class="cpanel on" id="cp-trivia" role="tabpanel" aria-labelledby="ct-trivia">
       <div id="tplay">
         <div class="cmeta"><span id="tcountq">Question 1 of 8</span><span id="tscore">Score 0</span></div>
+        <p class="best" id="tbest"></p>
         <div class="cbar"><i id="tbar" style="width:0"></i></div>
         <p class="tq" id="tq"></p>
         <div class="topts" id="topts"></div>
@@ -781,6 +812,31 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <p class="fitnote" id="fnote"></p>
     </div>
 
+    <div class="cpanel" id="cp-size" role="tabpanel" aria-labelledby="ct-size" hidden>
+      <h3>What jacket size am I?</h3>
+      <p class="sub">Two measurements get you to the right place on the rack.</p>
+      <div class="sz">
+        <div>
+          <div class="f"><label for="zchest">Chest (inches)</label><input id="zchest" type="number" inputmode="decimal" min="30" max="60" step="0.5" value="40"></div>
+          <div class="f"><span class="lab" style="display:block;font-weight:500;font-size:.95rem;margin-bottom:8px" id="zhl">Height</span>
+            <div class="hw"><select id="zft" aria-label="Height, feet"><option>5</option><option selected>5</option><option>6</option></select><select id="zin" aria-label="Height, inches"></select></div></div>
+          <p class="how">To measure your chest, wrap a tape around the fullest part, under your arms and over a shirt. Keep it level and snug, not tight.</p>
+        </div>
+        <div class="out" aria-live="polite"><p>Start with</p><p class="big" id="zout"></p><p id="znote"></p></div>
+      </div>
+    </div>
+
+    <div class="cpanel" id="cp-pack" role="tabpanel" aria-labelledby="ct-pack" hidden>
+      <h3>Pack for a trip</h3>
+      <p class="sub">Tell us how long and what for. You’ll get a list that fits in a carry-on.</p>
+      <div class="pk">
+        <div><p class="lab" id="pkl" style="font-weight:500;font-size:.95rem;margin-bottom:9px">What kind of trip?</p><div class="chipset" id="pktype" role="group" aria-labelledby="pkl"></div></div>
+        <div class="nrow"><button class="step" type="button" id="pkminus" aria-label="One night fewer">−</button><span class="nval" id="pkn" aria-live="polite"></span><button class="step" type="button" id="pkplus" aria-label="One night more">+</button></div>
+        <ul class="pklist" id="pklist"></ul>
+        <p class="pktip" id="pktip"></p>
+      </div>
+    </div>
+
     <div class="cpanel" id="cp-cpw" role="tabpanel" aria-labelledby="ct-cpw" hidden>
       <h3>Is it worth the money?</h3>
       <p class="sub">The price tag matters less than how often you wear it. Run the numbers before you buy.</p>
@@ -803,9 +859,9 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <p class="lede">Styling works for more than one closet. Ask us about any of these.</p>
     </div>
     <div class="trio">
-      <article><p class="k">For someone else</p><h3>Gift a Closet Audit</h3><p>A session with a stylist is a present he’ll use every morning. Give The Closet Audit for a birthday, the holidays or Father’s Day.</p><a class="lnk" href="mailto:thevaletclubstyling@gmail.com?subject=Gift%20a%20Closet%20Audit">Ask about gifting</a></article>
-      <article><p class="k">For the big day</p><h3>Grooms and wedding parties</h3><p>From the suit to the shoes to the groomsmen standing next to you. We’ll make sure everyone looks right and nobody has to think about it.</p><a class="lnk" href="mailto:thevaletclubstyling@gmail.com?subject=Wedding%20styling">Ask about wedding styling</a></article>
-      <article><p class="k">For work</p><h3>Teams and offices</h3><p>A styling session for a sales team, new leaders or a whole office. Practical advice on dressing for the role and the room.</p><a class="lnk" href="mailto:thevaletclubstyling@gmail.com?subject=Team%20styling%20session">Ask about team sessions</a></article>
+      <article><p class="k">For someone else</p><h3>Gift a Closet Audit</h3><p>A session with a stylist is a present he’ll use every morning. Give The Closet Audit for a birthday, the holidays or Father’s Day.</p><a class="lnk" href="mailto:hello@thevaletclubstyling.com?subject=Gift%20a%20Closet%20Audit">Ask about gifting</a></article>
+      <article><p class="k">For the big day</p><h3>Grooms and wedding parties</h3><p>From the suit to the shoes to the groomsmen standing next to you. We’ll make sure everyone looks right and nobody has to think about it.</p><a class="lnk" href="mailto:hello@thevaletclubstyling.com?subject=Wedding%20styling">Ask about wedding styling</a></article>
+      <article><p class="k">For work</p><h3>Teams and offices</h3><p>A styling session for a sales team, new leaders or a whole office. Practical advice on dressing for the role and the room.</p><a class="lnk" href="mailto:hello@thevaletclubstyling.com?subject=Team%20styling%20session">Ask about team sessions</a></article>
     </div>
   </div>
 </section>
@@ -823,7 +879,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
     <figure class="look"><div class="ph" style="--tone:#5a5d60"><img src="https://images.unsplash.com/photo-1515736076039-a3ca66043b27?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Soft grey tailoring" loading="lazy"></div><figcaption><b>Soft grey tailoring</b><span>Dinner</span></figcaption></figure>
     <figure class="look"><div class="ph" style="--tone:#1A1815"><img src="https://images.unsplash.com/photo-1546572797-e8c933a75a1f?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The dark suit" loading="lazy"></div><figcaption><b>The dark suit</b><span>Evening</span></figcaption></figure>
     <figure class="look"><div class="ph" style="--tone:#143D30"><img src="https://images.unsplash.com/photo-1593030103066-0093718efeb9?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Sharp in navy" loading="lazy"></div><figcaption><b>Sharp in navy</b><span>Office</span></figcaption></figure>
-    <figure class="look"><div class="ph" style="--tone:#641E2B"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The three-piece" loading="lazy"></div><figcaption><b>The three-piece</b><span>Weddings</span></figcaption></figure>
+    <figure class="look"><div class="ph" style="--tone:#16365F"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The three-piece" loading="lazy"></div><figcaption><b>The three-piece</b><span>Weddings</span></figcaption></figure>
     <figure class="look"><div class="ph" style="--tone:#8a6a44"><img src="https://images.unsplash.com/photo-1598808503746-f34c53b9323e?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="The black suit" loading="lazy"></div><figcaption><b>The black suit</b><span>Black tie</span></figcaption></figure>
   </div>
   <div class="wrap"><div class="occ"><span>We dress clients for</span><b>The office</b><b>Client dinners</b><b>Weddings</b><b>Black tie</b><b>Travel</b><b>Weekends</b><b>A full refresh</b></div></div>
@@ -841,7 +897,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
     <div class="mosaic">
       <figure class="m1"><div class="ph" style="--tone:#2B4A6B"><img src="https://images.unsplash.com/photo-1633655442330-0b44ca0cce9b?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Cloth" loading="lazy"></div><figcaption>Cloth</figcaption></figure>
       <figure class="m2"><div class="ph" style="--tone:#143D30"><img src="https://images.unsplash.com/photo-1604727199378-bf5dd08726ad?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Watches" loading="lazy"></div><figcaption>Watches</figcaption></figure>
-      <figure class="m3"><div class="ph" style="--tone:#641E2B"><img src="https://images.unsplash.com/photo-1542702942-01343dd60a84?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Shoes" loading="lazy"></div><figcaption>Shoes</figcaption></figure>
+      <figure class="m3"><div class="ph" style="--tone:#16365F"><img src="https://images.unsplash.com/photo-1542702942-01343dd60a84?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Shoes" loading="lazy"></div><figcaption>Shoes</figcaption></figure>
       <figure class="m4"><div class="ph" style="--tone:#5a5d60"><img src="https://images.unsplash.com/photo-1705493253575-e911888621ff?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Texture" loading="lazy"></div><figcaption>Texture</figcaption></figure>
       <figure class="m5"><div class="ph" style="--tone:#8a6a44"><img src="https://images.unsplash.com/photo-1637868796504-32f45a96d5a0?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Leather goods" loading="lazy"></div><figcaption>Leather goods</figcaption></figure>
       <figure class="m6"><div class="ph" style="--tone:#0E2E24"><img src="https://images.unsplash.com/photo-1633655442432-620aa55d7ac1?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="The rack" loading="lazy"></div><figcaption>The rack</figcaption></figure>
@@ -987,7 +1043,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
     <div class="side">
       <h2 id="h-faq">Questions, answered</h2>
       <p class="lede">Something else on your mind? Send us a note and we’ll get back to you.</p>
-      <a class="btn ghost" href="mailto:thevaletclubstyling@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email us</a>
+      <a class="btn ghost" href="mailto:hello@thevaletclubstyling.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email us</a>
     </div>
     <div class="qa">
       <details open><summary>Which service should I start with?<span class="pm" aria-hidden="true"></span></summary><p class="a">If you’d like to get more from what you already own, start with The Closet Audit. If you know you need new outfits, The Men’s Club gets you 3–5 complete looks. If you want everything handled, including an audit, 5–7 looks, accessories and a final fit session, choose The Exclusive. A discovery call will help you decide.</p></details>
@@ -1008,9 +1064,10 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <p class="lede">Reserve a private discovery call to discuss your wardrobe, your goals, and the right service for you.</p>
       <div class="ways">
         <a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></span><small>Book online</small><b>Choose a time on our calendar</b></a>
-        <a href="mailto:thevaletclubstyling@gmail.com"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><small>Email</small><b>thevaletclubstyling@gmail.com</b></a>
+        <a href="mailto:hello@thevaletclubstyling.com"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><small>Email</small><b>hello@thevaletclubstyling.com</b></a>
         <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></span><small>Instagram</small><b>@valetclubstyling</b></a>
         <a href="https://tiktok.com/@thevaletclubstyling" target="_blank" rel="noopener"><span class="dot"><svg class="ic fill" aria-hidden="true"><use href="#i-tt"/></svg></span><small>TikTok</small><b>@thevaletclubstyling</b></a>
+        <a href="#" id="vcard" download="the-valet-club.vcf"><span class="dot"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><small>Keep us handy</small><b>Save us to your contacts</b></a>
       </div>
     </div>
     <form class="form" id="form" novalidate>
@@ -1039,7 +1096,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       </div>
       <div><label for="msg">Anything we should know?</label><textarea id="msg" placeholder="Sizes, favorite brands, an upcoming event"></textarea></div>
       <button class="btn" type="submit">Write the email</button>
-      <p class="fine">Prefer to write it yourself? Email thevaletclubstyling@gmail.com.</p>
+      <p class="fine">Prefer to write it yourself? Email hello@thevaletclubstyling.com.</p>
     </form>
   </div>
 </section>
@@ -1054,13 +1111,13 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
         <div class="icons">
           <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></a>
           <a href="https://tiktok.com/@thevaletclubstyling" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic fill" aria-hidden="true"><use href="#i-tt"/></svg></a>
-          <a href="mailto:thevaletclubstyling@gmail.com" aria-label="Email"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a>
+          <a href="mailto:hello@thevaletclubstyling.com" aria-label="Email"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a>
           <a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener" aria-label="Book a consultation"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></a>
         </div>
       </div>
       <div><h4>Services</h4><ul><li><a href="#services">The Closet Audit</a></li><li><a href="#services">The Men’s Club</a></li><li><a href="#services">The Exclusive</a></li><li><a href="#more">Gifting, weddings and teams</a></li></ul></div>
       <div><h4>The Valet Club</h4><ul><li><a href="#approach">Our approach</a></li><li><a href="#clubhouse">The Clubhouse</a></li><li><a href="#founders">About us</a></li><li><a href="#journal">The Journal</a></li><li><a href="#style-note">The Style Note</a></li><li><a href="#faq">Questions</a></li><li><a href="#contact">Contact</a></li></ul></div>
-      <div><h4>Get in touch</h4><ul><li><a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a></li><li><a href="mailto:thevaletclubstyling@gmail.com">thevaletclubstyling<wbr>@gmail.com</a></li><li>Phoenix and Scottsdale, Arizona</li><li>By appointment</li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a></li><li><a href="mailto:hello@thevaletclubstyling.com">hello<wbr>@thevaletclubstyling.com</a></li><li>Phoenix and Scottsdale, Arizona</li><li>By appointment</li></ul></div>
     </div>
     <div class="bot"><span>© <span id="yr">2026</span> The Valet Club. All rights reserved.</span><a href="#top"><svg class="ic" aria-hidden="true"><use href="#i-up"/></svg>Back to top</a></div>
   </div>
@@ -1068,7 +1125,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 
 <div class="mbar" id="mbar">
   <a class="btn" href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Book a consultation</a>
-  <a class="btn ghost sq" href="mailto:thevaletclubstyling@gmail.com" aria-label="Email us"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a>
+  <a class="btn ghost sq" href="mailto:hello@thevaletclubstyling.com" aria-label="Email us"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></a>
 </div>
 
 <script>
@@ -1089,6 +1146,13 @@ qa('.ph img').forEach(function(img){
   img.addEventListener('error',fail);
   if(img.complete){img.naturalWidth?up():(img.currentSrc&&fail())}else img.addEventListener('load',up,{once:true});
 });
+
+/* scroll progress */
+var pr=q('#prog'),prf=0;function prog(){prf=0;var h=document.documentElement.scrollHeight-innerHeight;pr.style.width=(h>0?Math.min(100,scrollY/h*100):0)+'%'}
+addEventListener('scroll',function(){if(!prf)prf=requestAnimationFrame(prog)},{passive:true});prog();
+
+/* save contact */
+q('#vcard').href='data:text/vcard;charset=utf-8,'+encodeURIComponent("BEGIN:VCARD\nVERSION:3.0\nFN:The Valet Club\nORG:The Valet Club\nTITLE:Private Menswear Styling\nEMAIL;TYPE=WORK:hello@thevaletclubstyling.com\nURL:https://thevaletclubstyling.com\nNOTE:Private menswear styling in Phoenix and Scottsdale. Instagram @valetclubstyling\nEND:VCARD");
 
 /* menu */
 var hdr=q('#hdr'),bg=q('#burger');
@@ -1116,7 +1180,7 @@ q('#next').addEventListener('click',function(){rail.scrollBy({left:step(),behavi
 q('#noteform').addEventListener('submit',function(e){e.preventDefault();var v=q('#nemail').value.trim(),f=q('#nfine');
   if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){f.textContent='Enter a valid email address, like you@example.com.';q('#nemail').focus();return}
   f.textContent='This opens an email to us so we can add you.';
-  location.href='mailto:thevaletclubstyling@gmail.com?subject='+encodeURIComponent('Add me to The Style Note')+'&body='+encodeURIComponent('Please add '+v+' to The Style Note.')});
+  location.href='mailto:hello@thevaletclubstyling.com?subject='+encodeURIComponent('Add me to The Style Note')+'&body='+encodeURIComponent('Please add '+v+' to The Style Note.')});
 
 /* which-service quiz */
 (function(){var qs=qa('#quiz .q'),res=q('#qres'),prog=q('#qprog'),sc,i;
@@ -1136,12 +1200,13 @@ q('#noteform').addEventListener('submit',function(e){e.preventDefault();var v=q(
 (function(){var boxes=qa('#ticks input'),c=q('#tcount'),m=q('#tmsg');
   function upd(){var n=boxes.filter(function(b){return b.checked}).length;c.textContent=n+' of '+boxes.length;
     m.textContent=n===0?'Tick what’s already in your closet.':n<=5?'A solid start. The missing pieces are where a stylist saves you the most time.':n<=10?'Most of the foundation is there. A few well-chosen additions will tie it together.':'You have the foundation. Now it’s about fit, combinations and the finishing details.'}
-  boxes.forEach(function(b){b.addEventListener('change',upd)});})();
+  try{var sv=JSON.parse(localStorage.getItem('vc_ticks')||'[]');boxes.forEach(function(b,k){b.checked=!!sv[k]})}catch(e){}
+  boxes.forEach(function(b){b.addEventListener('change',function(){upd();try{localStorage.setItem('vc_ticks',JSON.stringify(boxes.map(function(x){return x.checked?1:0})))}catch(e){}})});upd();})();
 
 /* clubhouse */
 (function(){
   var tabs=qa('.ctabs [role=tab]'),panels=qa('.cpanel');
-  tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});panels.forEach(function(p){var on=p.id===t.getAttribute('aria-controls');p.classList.toggle('on',on);p.hidden=!on})})});
+  tabs.forEach(function(t,ix){t.addEventListener('keydown',function(e){if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;e.preventDefault();var nx=tabs[(ix+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];nx.focus();nx.click()});t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});panels.forEach(function(p){var on=p.id===t.getAttribute('aria-controls');p.classList.toggle('on',on);p.hidden=!on})})});
   function el(tag,txt,cls){var e=document.createElement(tag);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
   function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 
@@ -1155,8 +1220,8 @@ q('#noteform').addEventListener('submit',function(e){e.preventDefault();var v=q(
       q('#tscore').textContent='Score '+ts;var n=q('#tnext');n.textContent=ti===T.length-1?'See my score':'Next question';n.classList.add('on');n.focus()});box.appendChild(b)})}
   function tend(){q('#tplay').style.display='none';q('#tres').classList.add('on');q('#tfinal').textContent=ts+' out of '+T.length;
     var r=ts===T.length?['Best dressed in the room','A perfect score. You could do our job.']:ts>=6?['Sharp','You know your stuff. A stylist would just be fine-tuning.']:ts>=3?['Getting there','A solid base. A session with us would fill in the gaps fast.']:['Rookie','Everyone starts somewhere. That’s exactly what we’re here for.'];
-    q('#trank').textContent=r[0];q('#tline').textContent=r[1];q('#tshared').textContent=''}
-  function tstart(){ti=0;ts=0;q('#tplay').style.display='';q('#tres').classList.remove('on');tshow()}
+    q('#trank').textContent=r[0];q('#tline').textContent=r[1];q('#tshared').textContent='';try{var b=parseInt(localStorage.getItem('vc_best')||'0',10);if(ts>b){localStorage.setItem('vc_best',String(ts));b=ts}}catch(e){}}
+  function tstart(){try{var b=localStorage.getItem('vc_best');q('#tbest').textContent=b?'Your best so far: '+b+' out of '+T.length:''}catch(e){}ti=0;ts=0;q('#tplay').style.display='';q('#tres').classList.remove('on');tshow()}
   q('#tnext').addEventListener('click',function(){ti++;if(ti>=T.length)tend();else tshow()});
   q('#tagain').addEventListener('click',tstart);
   q('#tshare').addEventListener('click',function(){var url=location.href.split('#')[0]+'#clubhouse',txt='I scored '+ts+' out of '+T.length+' on The Valet Club menswear trivia. Think you can beat me?';
@@ -1180,10 +1245,33 @@ q('#noteform').addEventListener('submit',function(e){e.preventDefault();var v=q(
   sstart();
 
   /* outfit picker */
-  var O=["The office", "Date night", "A wedding", "The weekend", "Client dinner", "Travel day"],W=["Hot (90°F+)", "Warm (70s–80s)", "Cool evening"],F={"The office": [["Linen-blend shirt", "Lightweight chinos", "Loafers, no-show socks", "Sleeves rolled, watch on leather"], ["Oxford shirt, unlined blazer", "Tailored trousers", "Leather loafers or derbies", "Belt that matches the shoes"], ["Fine merino knit under a blazer", "Wool trousers", "Leather derbies", "A pocket square"]], "Date night": [["Camp-collar or linen shirt", "Slim dark chinos", "Suede loafers", "Open collar, good watch"], ["Dark polo or knit tee, light jacket", "Dark denim", "Clean leather sneakers or loafers", "One accessory, not three"], ["Fine-gauge crew neck, suede jacket", "Dark denim or wool trousers", "Chelsea boots", "A scent, applied lightly"]], "A wedding": [["Tan or light-blue suit in linen or tropical wool", "Matching trousers", "Brown loafers", "White shirt, tie optional"], ["Navy or mid-grey suit", "Matching trousers", "Brown or oxblood dress shoes", "Tie and pocket square"], ["Navy or charcoal suit", "Matching trousers", "Dark oxfords", "Tie, and bring a fine knit for after dark"]], "The weekend": [["Quality polo or heavyweight tee", "Tailored shorts or light chinos", "White sneakers", "Sunglasses, no socks showing"], ["Tee under an overshirt", "Dark denim or chinos", "White sneakers", "A cap or sunglasses"], ["Crew-neck sweater or overshirt", "Dark denim", "Suede boots or sneakers", "A light jacket for later"]], "Client dinner": [["Crisp shirt, unlined blazer", "Lightweight wool trousers", "Leather loafers", "No tie, top button open"], ["Blazer over a fine knit or shirt", "Tailored trousers", "Derbies or loafers", "Pocket square"], ["Dark blazer, roll-neck or shirt", "Wool trousers", "Chelsea boots or oxfords", "A good watch"]], "Travel day": [["Breathable polo", "Chinos with stretch", "Slip-on sneakers or loafers", "Unlined blazer to carry on"], ["Merino tee or polo, unlined blazer", "Dark trousers with stretch", "Loafers", "Everything works with everything"], ["Merino knit, unlined blazer", "Dark trousers with stretch", "Chelsea boots", "A scarf in the bag"]]},N=["In this heat, cloth matters more than anything. Stick to linen, cotton and lightweight wool.", "The easy season. This is when a layer you can take off earns its place.", "Desert evenings drop fast. One warm layer over what you wore all day is usually enough."],oi=0,wi=1,labs=['Top','Bottom','Shoes','Finish'];
+  var O=["The office", "Date night", "A wedding", "The weekend", "Client dinner", "Travel day"],W=["Hot (90°F+)", "Warm (70s–80s)", "Cool evening"],F={"The office": [["Linen-blend shirt", "Lightweight chinos", "Loafers, no-show socks", "Sleeves rolled, watch on leather"], ["Oxford shirt, unlined blazer", "Tailored trousers", "Leather loafers or derbies", "Belt that matches the shoes"], ["Fine merino knit under a blazer", "Wool trousers", "Leather derbies", "A pocket square"]], "Date night": [["Camp-collar or linen shirt", "Slim dark chinos", "Suede loafers", "Open collar, good watch"], ["Dark polo or knit tee, light jacket", "Dark denim", "Clean leather sneakers or loafers", "One accessory, not three"], ["Fine-gauge crew neck, suede jacket", "Dark denim or wool trousers", "Chelsea boots", "A scent, applied lightly"]], "A wedding": [["Tan or light-blue suit in linen or tropical wool", "Matching trousers", "Brown loafers", "White shirt, tie optional"], ["Navy or mid-grey suit", "Matching trousers", "Brown dress shoes", "Tie and pocket square"], ["Navy or charcoal suit", "Matching trousers", "Dark oxfords", "Tie, and bring a fine knit for after dark"]], "The weekend": [["Quality polo or heavyweight tee", "Tailored shorts or light chinos", "White sneakers", "Sunglasses, no socks showing"], ["Tee under an overshirt", "Dark denim or chinos", "White sneakers", "A cap or sunglasses"], ["Crew-neck sweater or overshirt", "Dark denim", "Suede boots or sneakers", "A light jacket for later"]], "Client dinner": [["Crisp shirt, unlined blazer", "Lightweight wool trousers", "Leather loafers", "No tie, top button open"], ["Blazer over a fine knit or shirt", "Tailored trousers", "Derbies or loafers", "Pocket square"], ["Dark blazer, roll-neck or shirt", "Wool trousers", "Chelsea boots or oxfords", "A good watch"]], "Travel day": [["Breathable polo", "Chinos with stretch", "Slip-on sneakers or loafers", "Unlined blazer to carry on"], ["Merino tee or polo, unlined blazer", "Dark trousers with stretch", "Loafers", "Everything works with everything"], ["Merino knit, unlined blazer", "Dark trousers with stretch", "Chelsea boots", "A scarf in the bag"]]},N=["In this heat, cloth matters more than anything. Stick to linen, cotton and lightweight wool.", "The easy season. This is when a layer you can take off earns its place.", "Desert evenings drop fast. One warm layer over what you wore all day is usually enough."],oi=0,wi=1,labs=['Top','Bottom','Shoes','Finish'];
   function chips(box,arr,get,set){arr.forEach(function(t,k){var b=el('button',t);b.type='button';b.setAttribute('aria-pressed',k===get()?'true':'false');b.addEventListener('click',function(){set(k);qa('button',box).forEach(function(x,j){x.setAttribute('aria-pressed',j===k?'true':'false')});fshow()});box.appendChild(b)})}
   function fshow(){var o=F[O[oi]][wi],out=q('#fout');out.innerHTML='';o.forEach(function(t,k){var d=el('div');d.appendChild(el('small',labs[k]));d.appendChild(el('b',t));out.appendChild(d)});q('#fnote').textContent=N[wi]}
   chips(q('#focc'),O,function(){return oi},function(k){oi=k});chips(q('#ftmp'),W,function(){return wi},function(k){wi=k});fshow();
+
+  /* jacket size */
+  (function(){var zin=q('#zin'),zft=q('#zft');zft.innerHTML='<option value="4">4 ft</option><option value="5" selected>5 ft</option><option value="6">6 ft</option>';
+    for(var k=0;k<12;k++){var o=document.createElement('option');o.value=k;o.textContent=k+' in';if(k===10)o.selected=true;zin.appendChild(o)}
+    function calc(){var c=parseFloat(q('#zchest').value),h=parseInt(zft.value,10)*12+parseInt(zin.value,10),out=q('#zout'),note=q('#znote');
+      if(!(c>=30&&c<=60)){out.textContent='—';note.textContent='Enter a chest measurement between 30 and 60 inches.';return}
+      var size=Math.round(c/2)*2,len=h<=67?'S':h<=72?'R':h<=75?'L':'XL',word={S:'Short',R:'Regular',L:'Long',XL:'Extra long'}[len];
+      out.textContent=size+len;
+      var between=Math.abs(c-size)>=.75;
+      note.textContent=size+' '+word+'. '+(between?'You’re between sizes, so try the '+(c>size?size+2:size-2)+' as well. ':'')+'Sizes run differently by brand, so treat this as where to start. We check the shoulders first: if those fit, a tailor can fix the rest.'}
+    ['#zchest','#zft','#zin'].forEach(function(id){q(id).addEventListener('input',calc);q(id).addEventListener('change',calc)});calc()})();
+
+  /* packing list */
+  (function(){var types=['Business','Leisure','Wedding'],ti=0,n=3,box=q('#pktype');
+    types.forEach(function(t,k){var b=el('button',t);b.type='button';b.setAttribute('aria-pressed',k===0?'true':'false');b.addEventListener('click',function(){ti=k;qa('button',box).forEach(function(x,j){x.setAttribute('aria-pressed',j===k?'true':'false')});show()});box.appendChild(b)});
+    function show(){q('#pkn').textContent=n+(n===1?' night':' nights');var L=[],half=Math.min(3,Math.ceil(n/2)),tops=Math.min(n,5);
+      if(ti===0){L=[[1,'Unlined navy blazer (wear it on the plane)'],[tops,'Dress shirts'],[half,'Tailored trousers'],[1,'Fine knit for cold offices'],[1,'Leather loafers or derbies'],[1,'Clean sneakers for the off hours'],[1,'Belt that matches the dress shoes']]}
+      else if(ti===1){L=[[tops,'Polos or good tees'],[1,'Overshirt or light jacket'],[half,'Chinos or tailored shorts'],[1,'Dark denim'],[1,'White sneakers'],[1,'Loafers for dinner'],[1,'Swim shorts'],[1,'Sunglasses']]}
+      else{L=[[1,'Suit, carried in a garment bag'],[2,'Dress shirts (one is a spare)'],[1,'Tie and pocket square'],[1,'Dress shoes, polished before you leave'],[Math.min(Math.max(n-1,1),4),'Casual tops for the other days'],[Math.min(2,half),'Chinos or dark denim'],[1,'Sneakers or loafers'],[1,'Belt and dress socks']]}
+      L.push([n+1,'Underwear and socks']);
+      var ul=q('#pklist');ul.innerHTML='';L.forEach(function(r){var li=el('li');li.appendChild(el('b',String(r[0])));li.appendChild(el('span',r[1]));ul.appendChild(li)});
+      q('#pktip').textContent=n>5?'Past five nights, plan on re-wearing or a hotel laundry run. Stick to one color palette so every top goes with every bottom.':'Stick to one color palette so every top goes with every bottom, and wear your bulkiest shoes on the plane.'}
+    q('#pkminus').addEventListener('click',function(){if(n>1){n--;show()}});q('#pkplus').addEventListener('click',function(){if(n<14){n++;show()}});show()})();
 
   /* cost per wear */
   function cpw(){var p=parseFloat(q('#cprice').value),w=parseFloat(q('#cwears').value),y=parseFloat(q('#cyears').value),o=q('#cout'),v=q('#cverdict');
@@ -1202,7 +1290,7 @@ q('#form').addEventListener('submit',function(e){e.preventDefault();
   var occ=qa('input[name=occ]:checked').map(function(i){return i.value}).join(', ')||'Not specified';
   var nm=q('#nm').value.trim(),tel=q('#tel').value.trim(),msg=q('#msg').value.trim();
   var body=['Service: '+svc,'Dressing for: '+occ,'Name: '+(nm||''),'Phone: '+(tel||''),'',msg].join('\n');
-  location.href='mailto:thevaletclubstyling@gmail.com?subject='+encodeURIComponent('Consultation request'+(nm?' from '+nm:''))+'&body='+encodeURIComponent(body);
+  location.href='mailto:hello@thevaletclubstyling.com?subject='+encodeURIComponent('Consultation request'+(nm?' from '+nm:''))+'&body='+encodeURIComponent(body);
 });
 })();
 </script>
