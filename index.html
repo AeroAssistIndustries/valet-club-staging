@@ -68,7 +68,8 @@ i,em{font-style:italic}
 .note .wrap{display:flex;justify-content:center;align-items:center;gap:8px 18px;flex-wrap:wrap;padding-block:9px;text-align:center}
 .note a{font-weight:500;display:inline-flex;align-items:center;min-height:44px;padding-inline:6px}
 .note .wrap{padding-block:0!important}
-.note span{padding-block:9px}
+.note span>span{padding:0}.note>.wrap>span{padding-block:9px}.note .sm{display:none}
+@media (max-width:600px){.note .lg{display:none}.note .sm{display:inline}.note .wrap{gap:0 10px;flex-wrap:nowrap;font-size:.8rem}.note a{white-space:nowrap}}
 .hdr{position:sticky;top:0;z-index:50;background:rgba(241,238,229,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:74px}
 .logo{display:inline-flex;align-items:center;min-height:44px;gap:8px;text-decoration:none;font:400 1.5rem/1 var(--f-d);letter-spacing:-.02em;white-space:nowrap}
@@ -107,7 +108,7 @@ i,em{font-style:italic}
 .hero .shot{position:relative;justify-self:end;width:100%;max-width:520px}
 .hero .shot .ph{aspect-ratio:4/5;--tone:#0c2747}
 .hero .shot::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(230,211,184,.45);pointer-events:none}
-.hangtag{position:absolute;left:-34px;bottom:44px;z-index:2;width:176px;background:var(--white);color:var(--ink);padding:40px 18px 18px;text-align:center;clip-path:polygon(22px 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%,0 22px);transform:rotate(-7deg);transform-origin:50% 0}
+.hangtag{position:absolute;left:-34px;top:26px;z-index:2;width:150px;background:var(--white);color:var(--ink);padding:40px 18px 18px;text-align:center;clip-path:polygon(22px 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%,0 22px);transform:rotate(-7deg);transform-origin:50% 0}
 .hangtag::before{content:"";position:absolute;left:50%;top:14px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 2px var(--white),0 0 0 3px var(--line)}
 .hangtag img{width:64px;height:64px;margin:0 auto;object-fit:contain}
 .hangtag span{display:block;font-size:.84rem;line-height:1.35;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink-2)}
@@ -129,7 +130,7 @@ i,em{font-style:italic}
 @media (max-width:900px){
   .hero .grid{grid-template-columns:1fr}
   .hero .shot{justify-self:center;max-width:440px;width:calc(100% - 28px);margin-right:14px}
-  .hangtag{left:-14px;width:150px;bottom:30px}
+  .hangtag{left:-12px;top:16px;width:118px;padding:30px 10px 12px}.hangtag img{width:46px;height:46px}.hangtag span{font-size:.72rem;margin-top:6px;padding-top:6px}
   .promise ul{grid-template-columns:1fr}
   .promise li{padding:20px 0}.promise li+li{padding-left:0;border-left:0;border-top:1px solid rgba(241,238,229,.18)}
 }
@@ -540,7 +541,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
   <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5.500 11.500 12 5l6.500 6.500"/></symbol>
 </svg>
 
-<div class="note"><div class="wrap"><span>Private consultations by appointment in Phoenix and Scottsdale.</span><a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Choose a time</a></div></div>
+<div class="note"><div class="wrap"><span><span class="lg">Private consultations by appointment in Phoenix and Scottsdale.</span><span class="sm">By appointment in Phoenix and Scottsdale</span></span><a href="https://calendar.app.google/3xysaB2hiUNzxp8AA" target="_blank" rel="noopener">Choose a time</a></div></div>
 
 <header class="hdr" id="hdr">
   <div class="wrap">
@@ -1077,12 +1078,13 @@ q('#yr').textContent=new Date().getFullYear();
 
 /* photos: mark failures, then swap in a sharper version when one is available */
 qa('img[data-fb]').forEach(function(img){
-  var swap=function(){var fb=img.getAttribute('data-fb');if(fb){img.removeAttribute('data-fb');img.src=fb}};
-  img.addEventListener('error',swap);
-  if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))swap();
+  var swap=function(fromEvent){var fb=img.getAttribute('data-fb');if(!fb)return;img.removeAttribute('data-fb');img._skip=fromEvent===true;img.src=fb};
+  img.addEventListener('error',function(){swap(true)});
+  if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))swap(false);
 });
 qa('.ph img').forEach(function(img){
-  var fail=function(){if(img.hasAttribute('data-fb'))return;img.closest('.ph').classList.add('noimg')};
+  var fail=function(){if(img._skip){img._skip=false;return}if(img.hasAttribute('data-fb'))return;img.closest('.ph').classList.add('noimg')};
+  img.addEventListener('load',function(){img.closest('.ph').classList.remove('noimg')});
   var up=function(){var hi=img.getAttribute('data-hi');if(!hi)return;var t=new Image();t.onload=function(){if(t.naturalWidth>img.naturalWidth)img.src=hi};t.src=hi};
   img.addEventListener('error',fail);
   if(img.complete){img.naturalWidth?up():(img.currentSrc&&fail())}else img.addEventListener('load',up,{once:true});
