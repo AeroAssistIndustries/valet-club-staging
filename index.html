@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>The Valet Club | Private Menswear Styling in Phoenix &amp; Scottsdale</title>
 <meta name="description" content="Private personal styling for men. Wardrobe edits, personal shopping, and occasion dressing in Phoenix and Scottsdale. By appointment.">
-<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://thevaletclubstyling.com/">
+<meta property="og:url" content="https://thevaletclubstyling.com/">
+<script>if(!/(^|\.)thevaletclubstyling\.com$/.test(location.hostname)){var m=document.createElement("meta");m.name="robots";m.content="noindex, nofollow";document.head.appendChild(m)}</script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Valet Club | Private Menswear Styling">
 <meta property="og:description" content="Dress well. Live effortlessly. Private styling for men in Phoenix and Scottsdale.">
@@ -46,7 +48,7 @@ i,em{font-style:italic}
 .ic{width:1.25em;height:1.25em;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .ic.fill{fill:currentColor;stroke:none}
 :focus-visible{outline:2px solid var(--camel);outline-offset:3px}
-.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:99;background:var(--white);padding:10px 14px}
+.skip{position:absolute;left:-999px;top:0}.skip:focus{left:16px;top:16px;z-index:99;background:var(--white);padding:10px 14px}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;font:500 1rem var(--f-b);text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--linen);border-radius:2px;cursor:pointer;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
 .btn:hover{background:var(--oxblood);border-color:var(--oxblood);color:var(--linen)}
@@ -64,10 +66,12 @@ i,em{font-style:italic}
 /* note bar + header */
 .note{background:var(--green-2);color:var(--linen);font-size:.875rem}
 .note .wrap{display:flex;justify-content:center;align-items:center;gap:8px 18px;flex-wrap:wrap;padding-block:9px;text-align:center}
-.note a{font-weight:500}
+.note a{font-weight:500;display:inline-flex;align-items:center;min-height:44px;padding-inline:6px}
+.note .wrap{padding-block:0!important}
+.note span{padding-block:9px}
 .hdr{position:sticky;top:0;z-index:50;background:rgba(241,238,229,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:74px}
-.logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:400 1.5rem/1 var(--f-d);letter-spacing:-.02em;white-space:nowrap}
+.logo{display:inline-flex;align-items:center;min-height:44px;gap:8px;text-decoration:none;font:400 1.5rem/1 var(--f-d);letter-spacing:-.02em;white-space:nowrap}
 .logo img{display:block;width:auto}
 .logo .lt{height:40px}
 .logo .lw{height:46px}
@@ -106,7 +110,7 @@ i,em{font-style:italic}
 .hangtag{position:absolute;left:-34px;bottom:44px;z-index:2;width:176px;background:var(--white);color:var(--ink);padding:40px 18px 18px;text-align:center;clip-path:polygon(22px 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%,0 22px);transform:rotate(-7deg);transform-origin:50% 0}
 .hangtag::before{content:"";position:absolute;left:50%;top:14px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 2px var(--white),0 0 0 3px var(--line)}
 .hangtag img{width:64px;height:64px;margin:0 auto;object-fit:contain}
-.hangtag span{display:block;font-size:.8rem;line-height:1.35;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink-2)}
+.hangtag span{display:block;font-size:.84rem;line-height:1.35;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:var(--ink-2)}
 @media (prefers-reduced-motion:no-preference){
   .hangtag{animation:swing 2.6s var(--ease) .5s both}
   .hero .copy>*{animation:up .9s var(--ease) both}
@@ -186,12 +190,11 @@ th,td{padding:15px 16px;text-align:center;border-bottom:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left;padding-left:clamp(16px,2.4vw,28px)}
 thead th{font:400 1.2rem var(--f-d);border-bottom:1px solid var(--ink);vertical-align:bottom}
 tbody th{font-weight:400}
-@media (max-width:700px){table{min-width:540px;font-size:.92rem}tbody th,thead th:first-child{position:sticky;left:0;background:var(--white);max-width:150px;box-shadow:1px 0 0 var(--line)}tbody tr:last-child th{background:var(--linen)}th,td{padding:13px 10px}}
+@media (max-width:700px){thead th .the{display:none}thead th{overflow-wrap:normal;word-break:normal;font-size:.92rem!important}table{min-width:0;font-size:.86rem;table-layout:fixed}th,td{padding:12px 4px;overflow-wrap:break-word}th:first-child,td:first-child{width:37%;padding-left:12px}thead th{font-size:.98rem;line-height:1.15}td.v{font-size:.95rem}td.no{color:rgba(11,22,38,.45)}}
 td .ic{margin-inline:auto;color:var(--green);width:20px;height:20px}
-td.no{color:rgba(11,22,38,.28)}
+td.no{color:rgba(11,22,38,.4)}
 td.v{font:400 italic 1.08rem var(--f-d)}
 tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
-.swipe{display:none}@media (max-width:700px){.swipe{display:inline}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 
@@ -222,7 +225,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .news p{color:var(--ink-2);max-width:60ch}
 .news .take{color:var(--ink);font:400 italic 1.08rem/1.45 var(--f-d)}
 .news .src{font-size:.9rem;color:var(--ink-2)}
-.news .src a{color:var(--oxblood)}
+.news .src a{color:var(--oxblood);display:inline-block;padding-block:8px}
 .jside{display:grid;gap:22px;position:sticky;top:104px}
 .card{padding:clamp(22px,2.6vw,32px);display:grid;gap:14px}
 .card.desert{background:var(--camel-l)}
@@ -233,8 +236,8 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .card.desert li b{font:400 1.08rem var(--f-d)}
 .card.desert li .ic{margin-top:.25em;color:var(--oxblood)}
 .ticks{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px}
-.ticks label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:.95rem;cursor:pointer;line-height:1.35}
-.ticks input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin:1px 0 0;border:1px solid var(--ink);border-radius:2px;background:var(--white);cursor:pointer;display:grid;place-items:center}
+.ticks label{display:flex;gap:10px;align-items:center;min-height:44px;padding:6px 0;font-size:.95rem;cursor:pointer;line-height:1.35}
+.ticks input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin:0;border:1px solid var(--ink);border-radius:2px;background:var(--white);cursor:pointer;display:grid;place-items:center}
 .ticks input:checked{background:var(--green);border-color:var(--green)}
 .ticks input:checked::after{content:"";width:10px;height:5px;border-left:1.5px solid var(--linen);border-bottom:1.5px solid var(--linen);transform:translateY(-1px) rotate(-45deg)}
 .tally{border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:10px;justify-items:start}
@@ -273,20 +276,21 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .more h3{font-size:clamp(1.5rem,2.2vw,1.9rem)}
 .more p{color:var(--ink-2);font-size:.99rem}
 .more .k{font:400 italic 1.05rem var(--f-d);color:var(--oxblood)}
-.more a.lnk{font-weight:500;margin-top:4px}
+.more a.lnk{font-weight:500;margin-top:0;display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:900px){.more .trio{grid-template-columns:1fr}.more article,.more article+article{padding:26px 0;border-left:0}.more article+article{border-top:1px solid var(--line)}}
 /* style note signup */
 .note-up{margin-top:clamp(56px,7vw,96px);background:var(--green);color:var(--linen);padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
 .note-up h3{font-size:clamp(1.8rem,3vw,2.6rem)}
 .note-up p{color:rgba(241,238,229,.8);margin-top:12px;max-width:42ch}
-.note-up form{display:grid;gap:10px}
+.note-up>*{min-width:0}
+.note-up form{display:grid;gap:10px;min-width:0}
 .note-up .row{display:flex;gap:10px}
 .note-up label{font-weight:500;font-size:.95rem}
 .note-up input{flex:1;min-width:0;min-height:52px;padding:13px 15px;font:400 1rem var(--f-b);color:var(--ink);background:var(--linen);border:1px solid var(--linen);border-radius:2px}
 .note-up input:focus{outline:2px solid var(--camel);outline-offset:2px}
 .note-up .fine{font-size:.88rem;color:rgba(241,238,229,.66);margin:0}
 @media (max-width:900px){.note-up{grid-template-columns:1fr}}
-@media (max-width:480px){.note-up .row{flex-direction:column}}
+@media (max-width:480px){.note-up .row{flex-direction:column}.note-up .row input,.note-up .row .btn{width:100%;flex:none}}
 
 
 /* holiday edit */
@@ -300,7 +304,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .hgrid .when{font:400 italic 1.02rem var(--f-d);color:var(--camel-l)}
 .hgrid h4{font:400 1.4rem/1.15 var(--f-d)}
 .hgrid p{font-size:.96rem;color:rgba(241,238,229,.82)}
-.hgrid .skip{font-size:.9rem;color:rgba(241,238,229,.66)}
+.hgrid .hskip{font-size:.9rem;color:rgba(241,238,229,.66)}
 .holiday .cta{margin-top:clamp(24px,3vw,36px);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .holiday .cta p{color:rgba(241,238,229,.82);font-size:.98rem;max-width:44ch}
 @media (max-width:1040px){.hgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.hgrid article:nth-child(3){padding-left:0;border-left:0}.hgrid article:nth-child(n+3){border-top:1px solid rgba(241,238,229,.2);margin-top:20px}}
@@ -340,7 +344,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .cres .rank{font:400 italic clamp(1.5rem,2.6vw,2.1rem) var(--f-d);color:var(--oxblood)}
 .cres p{color:var(--ink-2);max-width:52ch}
 .cres .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;align-items:center}
-.linkbtn{background:none;border:0;padding:14px 6px;font:500 1rem var(--f-b);color:var(--ink);text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+.linkbtn{background:none;border:0;min-height:44px;padding:10px 6px;font:500 1rem var(--f-b);color:var(--ink);text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
 .vs{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin-top:6px}
 .vs button{font:400 clamp(1.3rem,2.4vw,2rem)/1.15 var(--f-d);padding:clamp(28px,5vw,60px) 16px;border:1px solid rgba(11,22,38,.3);background:var(--linen);color:var(--ink);cursor:pointer;border-radius:2px;transition:background .25s,color .25s,transform .25s var(--ease)}
 .vs button:hover{background:var(--green);color:var(--linen);transform:translateY(-3px)}
@@ -417,7 +421,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .people i{display:block;font:400 italic 1.05rem var(--f-d);color:var(--oxblood);margin-top:10px}
 .fgrid .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-height:240px}
 .fgrid .duo .ph:first-child{--tone:var(--blue-d)}.fgrid .duo .ph:last-child{--tone:var(--oxblood)}
-@media (max-width:900px){.founders .top,.fgrid{grid-template-columns:1fr}.fgrid .main{min-height:0;aspect-ratio:4/5}.fgrid .duo{min-height:0}.fgrid .duo .ph{aspect-ratio:3/4}}
+@media (max-width:900px){.founders .top,.fgrid{grid-template-columns:1fr}.fgrid .main{min-height:0;aspect-ratio:auto;height:min(120vw,640px)}.fgrid .main img{object-position:50% 25%}.fgrid .duo{min-height:0}.fgrid .duo .ph{aspect-ratio:3/4}}
 
 /* follow */
 .follow{background:var(--linen-2);padding-block:clamp(56px,7vw,96px)}
@@ -462,7 +466,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .ways a:hover .dot{background:var(--camel);color:var(--ink);border-color:var(--camel)}
 .ways .ic{width:20px;height:20px}
 .ways small{font-size:.88rem;color:rgba(241,238,229,.68)}
-.ways b{font:400 clamp(1.1rem,1.6vw,1.3rem)/1.2 var(--f-d);overflow-wrap:anywhere}
+.ways b{font:400 clamp(.86rem,4.1vw,1.3rem)/1.2 var(--f-d);overflow-wrap:anywhere}
 .form{background:var(--white);color:var(--ink);padding:clamp(26px,3.6vw,46px);display:grid;gap:22px;clip-path:polygon(30px 0,calc(100% - 30px) 0,100% 30px,100% 100%,0 100%,0 30px)}
 .form h3{font-size:clamp(1.7rem,2.6vw,2.2rem);margin-top:16px}
 .form>p{color:var(--ink-2);font-size:.98rem;margin-top:-10px}
@@ -489,7 +493,9 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .ftr .seal img{width:100%;height:100%;object-fit:contain}
 .ftr .line{font:300 italic 1.35rem/1.3 var(--f-d);color:rgba(241,238,229,.8);margin-top:18px;max-width:22ch}
 .ftr h4{font:500 .95rem var(--f-b);color:var(--camel-l);margin-bottom:16px}
-.ftr li+li{margin-top:10px}
+.ftr li+li{margin-top:4px}
+.ftr li a{display:inline-flex;align-items:center;min-height:40px}
+.ftr li{min-height:40px;display:flex;align-items:center}
 .ftr li{overflow-wrap:break-word}
 .ftr a{text-decoration:none;color:rgba(241,238,229,.84);transition:color .25s}
 .ftr a:hover{color:#fff;text-decoration:underline}
@@ -498,7 +504,8 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 .icons a:hover{background:var(--camel);border-color:var(--camel);color:var(--ink);text-decoration:none}
 .icons .ic{width:20px;height:20px}
 .ftr .bot{display:flex;justify-content:space-between;align-items:center;gap:14px 24px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(241,238,229,.16);font-size:.9rem;color:rgba(241,238,229,.62)}
-.ftr .bot a{display:inline-flex;align-items:center;gap:8px}
+.ftr .bot a{display:inline-flex;align-items:center;gap:8px;min-height:44px}
+@media (max-width:420px){.ftr .top{gap:30px 16px;font-size:.94rem}}
 @media (max-width:900px){.ftr .top{grid-template-columns:1fr 1fr}.ftr .top>div:first-child{grid-column:1/-1}.ftr{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
 
 /* mobile book bar */
@@ -537,7 +544,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 
 <header class="hdr" id="hdr">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="The Valet Club, home"><img class="lt" src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-tag-logo.png&amp;w=256&amp;q=75" alt="" width="40" height="40"><img class="lw" src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-club-wordmark.png&amp;w=640&amp;q=75" alt="The Valet Club" width="138" height="46"></a>
+    <a class="logo" href="#top" aria-label="The Valet Club, home"><img class="lt" src="images/valet-tag-logo.png" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-tag-logo.png&amp;w=256&amp;q=75" alt="" width="40" height="40"><img class="lw" src="images/valet-club-wordmark.png" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-club-wordmark.png&amp;w=640&amp;q=75" alt="The Valet Club" width="138" height="46"></a>
     <nav id="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#approach">Our approach</a>
@@ -567,8 +574,8 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <p class="where"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Phoenix and Scottsdale, by appointment</p>
     </div>
     <div class="shot">
-      <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-editorial-standing.JPG&amp;w=640&amp;q=75" alt="Riley Richardson and Lexi Smith, founders of The Valet Club" fetchpriority="high"></div>
-      <div class="hangtag" aria-hidden="true"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-tag-logo.png&amp;w=256&amp;q=75" alt="" width="64" height="64"><span>Wardrobe edits<br>Personal shopping<br>Occasion dressing</span></div>
+      <div class="ph"><img src="images/founders-editorial-standing.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-editorial-standing.JPG&amp;w=640&amp;q=75" alt="Riley Richardson and Lexi Smith, founders of The Valet Club" fetchpriority="high"></div>
+      <div class="hangtag" aria-hidden="true"><img src="images/valet-tag-logo.png" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-tag-logo.png&amp;w=256&amp;q=75" alt="" width="64" height="64"><span>Wardrobe edits<br>Personal shopping<br>Occasion dressing</span></div>
     </div>
   </div>
   <div class="promise"><div class="wrap">
@@ -593,8 +600,8 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <p class="signoff">Riley &amp; Lexi</p>
     </div>
     <div class="pair">
-      <div class="ph a"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-portrait.JPG&amp;w=640&amp;q=75" alt="The founders of The Valet Club" loading="lazy"></div>
-      <div class="ph b"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-cards-closeup.JPG&amp;w=640&amp;q=75" alt="The Valet Club styling cards, close up" loading="lazy"></div>
+      <div class="ph a"><img src="images/founders-portrait.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-portrait.JPG&amp;w=640&amp;q=75" alt="The founders of The Valet Club" loading="lazy"></div>
+      <div class="ph b"><img src="images/valet-cards-closeup.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-cards-closeup.JPG&amp;w=640&amp;q=75" alt="The Valet Club styling cards, close up" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -640,10 +647,10 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
 
     <div class="compare">
       <h3>Compare the three</h3>
-      <p>Everything included in each service, side by side.<span class="swipe"> Swipe the table to see all three.</span></p>
+      <p>Everything included in each service, side by side.</p>
       <div class="tblwrap" tabindex="0" role="region" aria-label="Service comparison">
         <table>
-          <thead><tr><th scope="col"><span class="sr">What’s included</span></th><th scope="col">Closet Audit</th><th scope="col">Men’s Club</th><th scope="col">The Exclusive</th></tr></thead>
+          <thead><tr><th scope="col"><span class="sr">What’s included</span></th><th scope="col">Closet Audit</th><th scope="col">Men’s Club</th><th scope="col"><span class="the">The </span>Exclusive</th></tr></thead>
           <tbody>
             <tr><th scope="row">Full closet review</th><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
             <tr><th scope="row">Outfits from your existing wardrobe</th><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td><td class="no">–<span class="sr">Not included</span></td><td><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Included</span></td></tr>
@@ -695,7 +702,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
     <div class="side">
       <h2 id="h-app">A wardrobe that feels like you.</h2>
       <p class="lede">Every engagement follows the same three steps, whichever service you choose.</p>
-      <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-working.JPG&amp;w=640&amp;q=75" alt="The founders at work on a client’s looks" loading="lazy"></div>
+      <div class="ph"><img src="images/founders-working.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-working.JPG&amp;w=640&amp;q=75" alt="The founders at work on a client’s looks" loading="lazy"></div>
     </div>
     <div>
       <ol class="steps">
@@ -848,7 +855,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       <p class="lede">The Valet Club was built from a shared passion for styling, and is dedicated to helping men feel confident in what they wear.</p>
     </div>
     <div class="fgrid">
-      <div class="ph main"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-seated.JPG&amp;w=640&amp;q=75" alt="Riley Richardson and Lexi Smith, founders of The Valet Club" loading="lazy"></div>
+      <div class="ph main"><img src="images/founders-seated.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-seated.JPG&amp;w=640&amp;q=75" alt="Riley Richardson and Lexi Smith, founders of The Valet Club" loading="lazy"></div>
       <div class="col">
         <div>
           <p class="lede" style="margin-bottom:26px">Riley is a Texas native and Lexi is an Arizona native. They share a love for California and the effortless style it inspires. Together they bring different perspectives and a creative twist to men’s style, with one aim: wardrobes that feel confident, personal, and your own.</p>
@@ -858,8 +865,8 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
           </div>
         </div>
         <div class="duo">
-          <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-standing-variety.jpeg&amp;w=640&amp;q=75" alt="The founders standing together" loading="lazy"></div>
-          <div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-couch-variety.jpeg&amp;w=640&amp;q=75" alt="The founders reviewing looks together" loading="lazy"></div>
+          <div class="ph"><img src="images/founders-standing-variety.jpeg" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-standing-variety.jpeg&amp;w=640&amp;q=75" alt="The founders standing together" loading="lazy"></div>
+          <div class="ph"><img src="images/founders-couch-variety.jpeg" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-couch-variety.jpeg&amp;w=640&amp;q=75" alt="The founders reviewing looks together" loading="lazy"></div>
         </div>
       </div>
     </div>
@@ -876,11 +883,11 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
       </div>
     </div>
     <div class="strip">
-      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fclipboard-portrait.jpeg&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
-      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-editorial-standing.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
-      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-cards-closeup.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
-      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-portrait.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
-      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-working.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="images/clipboard-portrait.jpeg" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fclipboard-portrait.jpeg&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="images/founders-editorial-standing.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-editorial-standing.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="images/valet-cards-closeup.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-cards-closeup.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="images/founders-portrait.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-portrait.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
+      <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="See more on Instagram"><div class="ph"><img src="images/founders-working.JPG" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Ffounders-working.JPG&amp;w=640&amp;q=75" alt="" loading="lazy"></div></a>
     </div>
   </div>
 </section>
@@ -942,10 +949,10 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
     <div class="holiday" id="holiday">
       <div class="hd"><h3>The holiday edit</h3><p>Four occasions between now and January, and what we’d put a client in for each. Arizona winters are mild, so think layers you can take off.</p></div>
       <div class="hgrid">
-        <article><p class="when">Smart, one step up</p><h4>The office party</h4><p>A dark blazer over a fine knit or an open-collar shirt, tailored trousers and leather shoes. Add one festive touch, like a deep green or burgundy knit.</p><p class="skip">Skip the novelty sweater unless it’s on the invitation.</p></article>
-        <article><p class="when">Relaxed and put together</p><h4>Dinner with family</h4><p>A textured sweater or an overshirt with dark denim or chinos and clean leather sneakers or loafers. Comfortable enough for a long table.</p><p class="skip">Skip anything you’d wear to the gym.</p></article>
-        <article><p class="when">Dark and sharp</p><h4>New Year’s Eve</h4><p>A black or midnight suit with a crisp white shirt, or a velvet jacket with black trousers. Polished shoes, and a pocket square if you like one.</p><p class="skip">Skip the tie if the room is relaxed. Keep the jacket.</p></article>
-        <article><p class="when">Layers that pack flat</p><h4>Holiday travel</h4><p>An unlined blazer, a merino knit, dark trousers with stretch and loafers you can slip off at security. Everything should work with everything.</p><p class="skip">Skip packing a second pair of dress shoes.</p></article>
+        <article><p class="when">Smart, one step up</p><h4>The office party</h4><p>A dark blazer over a fine knit or an open-collar shirt, tailored trousers and leather shoes. Add one festive touch, like a deep green or burgundy knit.</p><p class="hskip">Skip the novelty sweater unless it’s on the invitation.</p></article>
+        <article><p class="when">Relaxed and put together</p><h4>Dinner with family</h4><p>A textured sweater or an overshirt with dark denim or chinos and clean leather sneakers or loafers. Comfortable enough for a long table.</p><p class="hskip">Skip anything you’d wear to the gym.</p></article>
+        <article><p class="when">Dark and sharp</p><h4>New Year’s Eve</h4><p>A black or midnight suit with a crisp white shirt, or a velvet jacket with black trousers. Polished shoes, and a pocket square if you like one.</p><p class="hskip">Skip the tie if the room is relaxed. Keep the jacket.</p></article>
+        <article><p class="when">Layers that pack flat</p><h4>Holiday travel</h4><p>An unlined blazer, a merino knit, dark trousers with stretch and loafers you can slip off at security. Everything should work with everything.</p><p class="hskip">Skip packing a second pair of dress shoes.</p></article>
       </div>
       <div class="cta"><a class="btn camel" href="#contact" data-pick="The Men’s Club">Get holiday looks picked for me</a><p>The Men’s Club gives you 3–5 complete looks, which covers the season.</p></div>
     </div>
@@ -1041,7 +1048,7 @@ tbody tr:last-child>*{border-bottom:0;font-weight:500;background:var(--linen)}
   <div class="wrap">
     <div class="top">
       <div>
-        <a class="seal" href="#top" aria-label="The Valet Club, back to top"><img src="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-club-circular-seal.png&amp;w=640&amp;q=75" alt="The Valet Club Styling seal" width="120" height="120" loading="lazy"></a>
+        <a class="seal" href="#top" aria-label="The Valet Club, back to top"><img src="images/valet-club-circular-seal.png" data-fb="https://thevaletclubstyling.com/_next/image?url=%2Fimages%2Fvalet-club-circular-seal.png&amp;w=640&amp;q=75" alt="The Valet Club Styling seal" width="120" height="120" loading="lazy"></a>
         <p class="line">Dress well. Live effortlessly.</p>
         <div class="icons">
           <a href="https://instagram.com/valetclubstyling" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></a>
@@ -1069,8 +1076,13 @@ var q=function(s,r){return (r||document).querySelector(s)}, qa=function(s,r){ret
 q('#yr').textContent=new Date().getFullYear();
 
 /* photos: mark failures, then swap in a sharper version when one is available */
+qa('img[data-fb]').forEach(function(img){
+  var swap=function(){var fb=img.getAttribute('data-fb');if(fb){img.removeAttribute('data-fb');img.src=fb}};
+  img.addEventListener('error',swap);
+  if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))swap();
+});
 qa('.ph img').forEach(function(img){
-  var fail=function(){img.closest('.ph').classList.add('noimg')};
+  var fail=function(){if(img.hasAttribute('data-fb'))return;img.closest('.ph').classList.add('noimg')};
   var up=function(){var hi=img.getAttribute('data-hi');if(!hi)return;var t=new Image();t.onload=function(){if(t.naturalWidth>img.naturalWidth)img.src=hi};t.src=hi};
   img.addEventListener('error',fail);
   if(img.complete){img.naturalWidth?up():(img.currentSrc&&fail())}else img.addEventListener('load',up,{once:true});
